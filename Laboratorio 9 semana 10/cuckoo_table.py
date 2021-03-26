@@ -18,8 +18,8 @@ class crearCuckooTable(object):
     def h2(self, key):
         return hash(key) % self.n
 
-    def __rehashing(self):
-        print("REHASHING...")
+    def __rehashing(self, motivo):
+        print("REHASHING POR {}...".format(motivo))
         tabla_aux = crearCuckooTable(self.n * 2)
         nlongitud = tabla_aux.n
         self.elementos = 0
@@ -63,7 +63,9 @@ class crearCuckooTable(object):
                 self.elementos += 1
                 
                 if self.factor_carga() > 0.7:
-                    self.__rehashing()
+                    print("Hola")
+                    motivo = "FACTOR DE CARGA {}".format(self.factor_carga())
+                    self.__rehashing(motivo)
                 return
 
             nuevo, tabla[p] = tabla[p], nuevo
@@ -78,8 +80,8 @@ class crearCuckooTable(object):
                 r = self.h2(nuevo.clave)
                 p == q
                 tabla = self.tabla1
-
-        self.__rehashing()
+        motivo = "EXCESOS DE COLISIONES"
+        self.__rehashing(motivo)
         self.agregar(nuevo.clave, nuevo.valor)
 
     def buscar(self, c):
@@ -96,13 +98,13 @@ class crearCuckooTable(object):
         if self.tabla1[self.h1(c)] is None and self.tabla2[self.h2(c)] is None:
             return None
 
-        elif self.tabla1[self.h1(c)].clave == c:
+        elif self.tabla1[self.h1(c)] is not None and self.tabla1[self.h1(c)].clave == c:
             value = self.tabla1[self.h1(c)].valor
             self.tabla1[self.h1(c)] = None
             self.elementos -= 1
             return value
 
-        elif self.tabla2[self.h2(c)].clave == c:
+        elif self.tabla2[self.h2(c)] is not None and self.tabla2[self.h2(c)].clave == c:
             value = self.tabla2[self.h2(c)].valor
             self.tabla2[self.h2(c)] = None
             self.elementos -= 1
@@ -132,7 +134,7 @@ if __name__ == '__main__':
     print("Tamaño de la tabla: {}".format(tabla.n))
     tabla.agregar(2, "2")
     tabla.agregar(42, "42")
-    tabla.agregar(22, "22")
+    tabla.agregar(21, "21")
     tabla.agregar(25, "25")
     tabla.agregar(27, "27")
     tabla.agregar(23, "23")
@@ -140,10 +142,11 @@ if __name__ == '__main__':
     tabla.agregar(33, "33")
     tabla.agregar(51, "51")
     tabla.agregar(54, "54")
+    tabla.agregar(22, "22")
     # print(tabla.buscar(22))
     # print(tabla.tabla1)
     # print(tabla.tabla2)
-    # print(tabla.buscar(25))
+    print("busqueda",tabla.buscar(29))
     tabla.mostrar()
     print("Hay {} elementos en la tabla".format(tabla.elementos))
     print("Tamaño de la tabla: {}".format(tabla.n))
