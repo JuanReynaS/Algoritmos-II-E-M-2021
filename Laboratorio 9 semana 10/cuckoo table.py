@@ -19,7 +19,7 @@ class crearCuckooTable(object):
         return hash(key) % self.n
 
     def __rehashing(self):
-        print("REHASHING.....")
+        print("REHASHING...")
         tabla_aux = crearCuckooTable(self.n * 2)
         nlongitud = len(tabla_aux)
         self.elementos = 0
