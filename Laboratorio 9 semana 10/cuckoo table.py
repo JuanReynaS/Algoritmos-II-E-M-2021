@@ -53,7 +53,7 @@ class crearCuckooTable(object):
 
         q = self.h1(nuevo.clave)
         p = q
-        tabla = self.self.tabla1
+        tabla = self.tabla1
 
         for i in range(10):
 
@@ -82,10 +82,13 @@ class crearCuckooTable(object):
     def buscar(self, c):
         if self.tabla1[self.h1(c)] is None and self.tabla2[self.h2(c)] is None:
             return None
-        elif (self.tabla1[self.h1(c)] is None and self.tabla2[self.h2(c)].clave == c):
-            return self.tabla2[self.h2(c)].valor
-        elif self.tabla2[self.h2(c)] is None and self.tabla1[self.h1(c)].clave == c:
+        
+        elif (self.tabla1[self.h1(c)] is not None and self.tabla1[self.h1(c)].clave == c):
             return self.tabla1[self.h1(c)].valor
+        
+        elif self.tabla2[self.h2(c)] is not None and self.tabla2[self.h2(c)].clave == c:
+            return self.tabla2[self.h2(c)].valor
+
 
     def eliminar(self, c):
         if self.tabla1[self.h1(c)] is None and self.tabla2[self.h2(c)] is None:
@@ -100,4 +103,13 @@ class crearCuckooTable(object):
             value = self.tabla2[self.h2(c)].valor
             self.tabla2[self.h2(c)] = None
             return value
-
+if __name__ == '__main__':
+    tabla = crearCuckooTable(10)
+    tabla.agregar(2,"2")
+    tabla.agregar(22,"22")
+    tabla.agregar(25,"25")
+    tabla.agregar(27,"27")
+    print(tabla.buscar(22))
+    print(tabla.tabla1)
+    print(tabla.tabla2)
+    print(tabla.buscar(25))
