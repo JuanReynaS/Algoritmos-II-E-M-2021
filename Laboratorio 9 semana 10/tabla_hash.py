@@ -76,9 +76,11 @@ class crear_tabla(object):
 
         value = self.tabla[indice].eliminar(c)
         if value is None:
+            print("Valor eliminado", value)
             return value
         else:  
             self.elementos -= 1
+            print("Valor eliminado", value)
             return value
 
 
