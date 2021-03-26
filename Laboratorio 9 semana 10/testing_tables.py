@@ -14,12 +14,15 @@ lista_tupla = [(i,str(i)) for i in lista]
 tabla = ct.crearCuckooTable(1021)
 
 for i in range(len(lista_tupla)):
-	if tabla.buscar(lista_tupla[i][0]) is None:
+	key_search = tabla.buscar(lista_tupla[i][0])
+	if key_search is None:
 		tabla.agregar(lista_tupla[i][0], lista_tupla[i][1])
 		a += 1
 	else:
+		print("VALOR A ELIMINAR: {}".format(key_search))
 		tabla.eliminar(lista_tupla[i][0])
 		b += 1
 
 tabla.mostrar()
+print("Agregados: {}, Eliminados: {}".format(a,b))
 print("Verificaciones: {}".format(a + b))

@@ -63,7 +63,6 @@ class crearCuckooTable(object):
                 self.elementos += 1
                 
                 if self.factor_carga() > 0.7:
-                    print("Hola")
                     motivo = "FACTOR DE CARGA {}".format(self.factor_carga())
                     self.__rehashing(motivo)
                 return
