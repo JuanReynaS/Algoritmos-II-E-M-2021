@@ -18,7 +18,6 @@ class crear_tabla(object):
         self.tabla = [None] * self.n
         self.elementos = 0
 
-
     def agregar(self, c, d):
         """ Se agrega a la tabla de hash una clave c, que tiene asociada un
             dato de tipo String d. Si la clave a agregar se encuentra en la
@@ -30,10 +29,10 @@ class crear_tabla(object):
         indice = c % self.n
         if self.tabla[indice] is None:
             self.elementos += 1
-            self.tabla[indice] = dl.lista_dobleE()        
+            self.tabla[indice] = dl.lista_dobleE()
             self.tabla[indice].insertar(c, d)
         else:
-            if self.tabla[indice].insertar(c, d) == True:
+            if self.tabla[indice].insertar(c, d) is True:
                 pass
             else:
                 self.elementos += 1
@@ -52,8 +51,8 @@ class crear_tabla(object):
             self.elementos += 1
             self.tabla[indice] = dl.lista_dobleE()
             self.tabla[indice].insertar_elem(e)
-        else:         
-            if self.tabla[indice].insertar_elem(e) == True:
+        else:
+            if self.tabla[indice].insertar_elem(e) is True:
                 pass
             else:
                 self.elementos += 1
@@ -66,7 +65,7 @@ class crear_tabla(object):
            clave igual a c, entonces el elemento se elimina de la tabla y retorna
            el String asociado a esa clave. En caso de que no haya ninguna clave
            c en la tabla de hash, se retorna None. """
-        
+
         assert(type(c) == int)
         indice = c % self.n
         if self.elementos == 0 or self.tabla[indice] is None:
@@ -74,29 +73,26 @@ class crear_tabla(object):
         value = self.tabla[indice].eliminar(c)
         if value is None:
             return value
-        else:  
+        else:
             self.elementos -= 1
             return value
-
 
     def eliminar_elem(self, e):
         """ Dada una referencia de un elemento e de tipo HashEntry de la tabla
             de hash, entonces se elimina a e de la tabla y se retorna T rue.
             Si e no es una referencia a un elemento en la tabla de hash, entonces
             la operaci ́on no tiene ning ́un efecto en la tabla y se retorna F alse."""
-        
+
         indice = e.key % self.n
         if self.elementos == 0 or self.tabla[indice] is None:
             return None
-        
+
         value = self.tabla[indice].eliminar_elem(e)
         if value is None:
             return False
         else:
-            self.elementos -= 1    
+            self.elementos -= 1
             return True
-            
-
 
     def buscar(self, c):
         """ Dada un clave c, se busca el elemento en la tabla de hash que posea la
@@ -126,7 +122,7 @@ class crear_tabla(object):
            Su objetivo es el de duplicar el tama ̃no de la tabla de hash en caso de
            que el factor"""
 
-        print("\nREHASHING...")
+        print("\n*** REHASHING...")
         tabla_aux = crear_tabla(self.n * 2)
         nlongitud = len(tabla_aux.tabla)
         self.elementos = 0
@@ -144,7 +140,6 @@ class crear_tabla(object):
         self.tabla = tabla_aux.tabla
         print("*** REHASHING finalizado con éxito ***\n")
         # self.mostrar()
-        
 
     def factor_carga(self):
         """ Retorna el factor de carga actual de la tabla de hash."""

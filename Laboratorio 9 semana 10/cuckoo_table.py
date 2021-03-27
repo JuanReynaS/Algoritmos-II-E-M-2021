@@ -1,5 +1,3 @@
-# https://www.educative.io/edpresso/the-fatal-refusing-to-merge-unrelated-histories-git-error
-# https://github.com/DeborahHier/CuckooHash/blob/master/CuckooHash.py
 import CuckooEntry as ce
 
 
@@ -19,17 +17,17 @@ class crearCuckooTable(object):
         return hash(key) % self.n
 
     def __rehashing(self, motivo):
-        print("\nREHASHING POR {}...".format(motivo))
+        print("\n*** REHASHING POR {}...".format(motivo))
         tabla_aux = crearCuckooTable(self.n * 2)
         nlongitud = tabla_aux.n
         self.elementos = 0
         for i in range(self.n):
             if self.tabla1[i] is not None:
                 tabla_aux.agregar(self.tabla1[i].clave, self.tabla1[i].valor)
-            
+
             if self.tabla2[i] is not None:
                 tabla_aux.agregar(self.tabla2[i].clave, self.tabla2[i].valor)
-        
+
         self.tabla1 = tabla_aux.tabla1
         self.tabla2 = tabla_aux.tabla2
         self.elementos = tabla_aux.elementos
@@ -51,7 +49,6 @@ class crearCuckooTable(object):
 
         nuevo = ce.crearCuckooEntry(c, v)
 
-
         q = self.h1(nuevo.clave)
         p = q
         tabla = self.tabla1
@@ -61,7 +58,7 @@ class crearCuckooTable(object):
             if tabla[p] is None:
                 tabla[p] = nuevo
                 self.elementos += 1
-                
+
                 if self.factor_carga() > 0.7:
                     motivo = "FACTOR DE CARGA {}".format(round(self.factor_carga(), 2))
                     self.__rehashing(motivo)
@@ -86,10 +83,10 @@ class crearCuckooTable(object):
     def buscar(self, c):
         if self.tabla1[self.h1(c)] is None and self.tabla2[self.h2(c)] is None:
             return None
-        
+
         elif (self.tabla1[self.h1(c)] is not None and self.tabla1[self.h1(c)].clave == c):
             return self.tabla1[self.h1(c)].valor
-        
+
         elif self.tabla2[self.h2(c)] is not None and self.tabla2[self.h2(c)].clave == c:
             return self.tabla2[self.h2(c)].valor
 
