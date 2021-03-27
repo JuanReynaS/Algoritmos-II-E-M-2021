@@ -19,7 +19,7 @@ class crearCuckooTable(object):
         return hash(key) % self.n
 
     def __rehashing(self, motivo):
-        print("REHASHING POR {}...".format(motivo))
+        print("\nREHASHING POR {}...".format(motivo))
         tabla_aux = crearCuckooTable(self.n * 2)
         nlongitud = tabla_aux.n
         self.elementos = 0
@@ -35,7 +35,7 @@ class crearCuckooTable(object):
         self.elementos = tabla_aux.elementos
         self.n = self.n * 2
 
-        print("*** REHASHING finalizado con éxito ***")
+        print("*** REHASHING finalizado con éxito ***\n")
 
     def factor_carga(self):
         """Retorna el factor de carga actual de la tabla de hash."""
@@ -63,7 +63,7 @@ class crearCuckooTable(object):
                 self.elementos += 1
                 
                 if self.factor_carga() > 0.7:
-                    motivo = "FACTOR DE CARGA {}".format(self.factor_carga())
+                    motivo = "FACTOR DE CARGA {}".format(round(self.factor_carga(), 2))
                     self.__rehashing(motivo)
                 return
 

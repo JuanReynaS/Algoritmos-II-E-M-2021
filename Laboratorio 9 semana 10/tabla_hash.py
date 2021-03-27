@@ -38,8 +38,7 @@ class crear_tabla(object):
             else:
                 self.elementos += 1
         if self.factor_carga() > 0.7:
-            self.mostrar()
-            print("Factor de carga: {}".format(round(self.factor_carga(),3)))
+            # self.mostrar()
             self.__rehashing()
 
     def agregar_elem(self, e):
@@ -59,8 +58,7 @@ class crear_tabla(object):
             else:
                 self.elementos += 1
         if self.factor_carga() > 0.7:
-            self.mostrar()
-            print("Factor de carga: {}".format(round(self.factor_carga(),3)))
+            # self.mostrar()
             self.__rehashing()
 
     def eliminar(self, c):
@@ -73,14 +71,11 @@ class crear_tabla(object):
         indice = c % self.n
         if self.elementos == 0 or self.tabla[indice] is None:
             return None
-
         value = self.tabla[indice].eliminar(c)
         if value is None:
-            print("Valor eliminado", value)
             return value
         else:  
             self.elementos -= 1
-            print("Valor eliminado", value)
             return value
 
 
@@ -124,13 +119,14 @@ class crear_tabla(object):
         for i in range(len(self.tabla)):
             print("{}: {}".format(i, self.tabla[i]))
         print("*** Número de elementos: {} ***\n". format(self.elementos))
+        print("*** Número de slots: {} ***\n". format(self.n))
 
     def __rehashing(self):
         """Es un m ́etodo privado, es decir, no debe ser usado por el usuario.
            Su objetivo es el de duplicar el tama ̃no de la tabla de hash en caso de
            que el factor"""
 
-        print("REHASHING...")
+        print("\nREHASHING...")
         tabla_aux = crear_tabla(self.n * 2)
         nlongitud = len(tabla_aux.tabla)
         self.elementos = 0
@@ -143,15 +139,17 @@ class crear_tabla(object):
                     self.elementos += 1
 
 
+        # Activo con esta multiplicación
+        self.n = self.n * 2
         self.tabla = tabla_aux.tabla
-        print("*** REHASHING finalizado con éxito ***")
-        self.mostrar()
+        print("*** REHASHING finalizado con éxito ***\n")
+        # self.mostrar()
         
 
     def factor_carga(self):
-        """Retorna el factor de carga actual de la tabla de hash."""
+        """ Retorna el factor de carga actual de la tabla de hash."""
         return self.nelementos() / self.n
 
     def nelementos(self):
-        """Retorna el n ́umero de elementos en la tabla de hash."""
+        """ Retorna el n ́umero de elementos en la tabla de hash."""
         return self.elementos
