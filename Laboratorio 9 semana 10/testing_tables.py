@@ -123,7 +123,7 @@ plt.show()
 
 plt.title("Memoria usada por las tablas")
 plt.xlabel('Numeros de claves porcesados')
-plt.ylabel('Memoria(Mb)')
+plt.ylabel('Memoria (Mb)')
 plt.plot(lista_exp, lista_mem_ht, 'r^-', label="Hash Table")
 plt.plot(lista_exp, lista_mem_ct, 'gs-', label="Cuckoo Table")
 plt.legend()
