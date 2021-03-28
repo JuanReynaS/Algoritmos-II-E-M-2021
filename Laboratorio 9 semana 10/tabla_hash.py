@@ -119,7 +119,7 @@ class crear_tabla(object):
         print("*** Número de slots: {} ***\n". format(self.n))
 
     def __rehashing(self):
-        """Es un m ́etodo privado, es decir, no debe ser usado por el usuario.
+        """Es un método privado, es decir, no debe ser usado por el usuario.
            Su objetivo es el de duplicar el tama ̃no de la tabla de hash en caso de
            que el factor"""
 

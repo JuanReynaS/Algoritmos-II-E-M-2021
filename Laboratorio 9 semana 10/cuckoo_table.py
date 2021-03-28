@@ -2,7 +2,7 @@ import CuckooEntry as ce
 
 
 class crearCuckooTable(object):
-    """docstring for crearCuckooTable"""
+    """Crea objeto CuckooTable"""
 
     def __init__(self, n):
         self.n = n
@@ -11,12 +11,20 @@ class crearCuckooTable(object):
         self.elementos = 0
 
     def h1(self, key):
+        """ Función de hash método de la división """
         return key % self.n
 
     def h2(self, key):
+        """ Función de hash de la biblioteca estandar python """
         return hash(key) % self.n
 
     def __rehashing(self, motivo):
+        """Es un método privado, es decir, no debe ser usado
+           por el usuario. Su objetivo es el de duplicar el
+           tama no de la tabla de hash en caso de
+           que el factor de carga sea mayor a 0.7
+        """
+
         print("\n*** REHASHING POR {}...".format(motivo))
         tabla_aux = crearCuckooTable(self.n * 2)
         nlongitud = tabla_aux.n
@@ -40,6 +48,20 @@ class crearCuckooTable(object):
         return self.elementos / self.n
 
     def agregar(self, c, v):
+        """ Se agrega a la tabla de hash una clave c, que tiene asociada un
+            valor v. Si la clave a agregar se encuentra en la tabla de hash,
+            entonces se sustituye el valor asociado a la clave por el valor
+            de v. Debe prevenir que este m ́etodo quede en un ciclo infinito,
+            utilizando la condici ́on adecuada para terminar el mismo. Si para
+            agregar un elemento es necesario hacer rehashing, entonces las
+            tablas duplican su tamano. Si al agregar un elemento, el factor
+            de carga es igual o mayor a 0,7, entonces se hace rehashing,
+            duplicando el tama ̃no de ambas tablas.
+        """
+
+        assert(type(c) == int)
+        assert(type(v) == str)
+
         if self.buscar(c) is not None:
             if (self.tabla1[self.h1(c)] is None and self.tabla2[self.h2(c)].clave == c):
                 self.tabla2[self.h2(c)].valor = v
@@ -53,7 +75,7 @@ class crearCuckooTable(object):
         p = q
         tabla = self.tabla1
 
-        for i in range(10):
+        for i in range(self.n):
 
             if tabla[p] is None:
                 tabla[p] = nuevo
@@ -81,6 +103,14 @@ class crearCuckooTable(object):
         self.agregar(nuevo.clave, nuevo.valor)
 
     def buscar(self, c):
+        """ Dada un clave c, se busca el elemento en la tabla de hash que
+            posea la clave igual a c. Si el elemento se encuentra en la
+            tabla, entonces se retorna el valor asociado a esa clave.
+            En caso de que no haya ninguna clave c en la tabla de hash, se
+            retorna None. """
+
+        assert(type(c) == int)
+
         if self.tabla1[self.h1(c)] is None and self.tabla2[self.h2(c)] is None:
             return None
 
@@ -91,6 +121,15 @@ class crearCuckooTable(object):
             return self.tabla2[self.h2(c)].valor
 
     def eliminar(self, c):
+        """
+        Dada un clave c, si algún elemento en la tabla de hash tiene una
+        clave igual a c, entonces el elemento se elimina de la tabla y se
+        retorna el valo asociado a esa clave. En caso de que no haya ninguna
+        clave c en la tabla de hash, se retorna None.
+        """
+
+        assert(type(c) == int)
+
         if self.tabla1[self.h1(c)] is None and self.tabla2[self.h2(c)] is None:
             return None
 
@@ -107,6 +146,9 @@ class crearCuckooTable(object):
             return value
 
     def mostrar(self):
+        """ Muestra por la salida est ́andar todos los elementos de la tabla
+            de hash, en forma de pares clave y valor."""
+
         print("\nTabla1 \t\t\t\t Tabla2")
         for i in range(self.n):
             tabla1 = self.tabla1[i]
@@ -142,7 +184,7 @@ if __name__ == '__main__':
     # print(tabla.buscar(22))
     # print(tabla.tabla1)
     # print(tabla.tabla2)
-    print("busqueda",tabla.buscar(29))
+    print("busqueda", tabla.buscar(29))
     tabla.mostrar()
     print("Hay {} elementos en la tabla".format(tabla.elementos))
     print("Tamaño de la tabla: {}".format(tabla.n))
