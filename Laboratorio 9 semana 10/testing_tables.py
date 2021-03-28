@@ -4,9 +4,9 @@ import tabla_hash as th
 import random as rd
 import time as tm
 import sys
+import hashEntry as he
 import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
+
 
 def get_size(obj, seen=None):
     """Recursively finds size of objects"""
@@ -41,8 +41,11 @@ lista_mem_ct = []
 lista_tiempo_ht = []
 lista_mem_ht = []
 
+lista_tiempo_htE = []
+lista_mem_htE = []
+
 for n in lista_exp:
-    a, b, c, d = 0, 0, 0, 0
+    a, b, c, d, e, f = 0, 0, 0, 0, 0, 0
     lista = [rd.randint(0, (2 * n) // 3) for x in range(0, n)]
     lista_tupla = [(i, str(i)) for i in lista]
 
@@ -91,7 +94,32 @@ for n in lista_exp:
     mem_th = get_size(tabla.tabla) / (1024 ** 2)
     lista_mem_ht.append(round(mem_th, 3))
 
-    ##############################################################################
+    ###########################################################################
+    print("\n\n********** HASH TABLE elementos tipo HashEntry **********")
+    print("Numeros de Elementos a procesar: {}...".format(n))
+    tm.sleep(3)
+    tabla = th.crear_tabla(1021)
+    inicio = tm.time()
+    for i in range(len(lista_tupla)):
+        objeto_te = he.HashEntry(lista_tupla[i][0], lista_tupla[i][1])
+        key_search = tabla.buscar(lista_tupla[i][0])
+        if key_search is None:
+            tabla.agregar_elem(objeto_te)
+            e += 1
+        else:
+            tabla.eliminar_elem(objeto_te)
+            f += 1
+    fin = tm.time()
+
+    tiempo_thE = fin - inicio
+    lista_tiempo_htE.append(round(tiempo_thE, 3))
+
+    mem_thE = get_size(tabla.tabla) / (1024 ** 2)
+    lista_mem_htE.append(round(mem_thE, 3))
+
+
+
+# #############################################################################
 
     # print("\n********** HASH TABLE **********")
     # print("* Longitud/Slots de la tabla: {}".format(long_th))
@@ -109,22 +137,26 @@ for n in lista_exp:
 
 print("Lista tiempo_th TH\n", lista_tiempo_ht)
 print("Lista Memoria HT\n", lista_mem_ht)
+print("Lista tiempo_th THE\n", lista_tiempo_htE)
+print("Lista Memoria HTE\n", lista_mem_htE)
 print("Lista tiempo_th CT\n", lista_tiempo_ct)
 print("Lista Memoria CT\n", lista_mem_ct)
 
 
-plt.title("Tiempo en procesar claves en tabla")
-plt.xlabel('Numeros de claves porcesados')
+plt.title("Tiempo en procesar claves en tabla Hash")
+plt.xlabel('Numeros de claves procesados')
 plt.ylabel('Tiempo(seg)')
 plt.plot(lista_exp, lista_tiempo_ht, 'ro-', label="Hash Table")
 plt.plot(lista_exp, lista_tiempo_ct, 'b^-', label="Cuckoo Table")
+plt.plot(lista_exp, lista_tiempo_htE, 'g+-', label="Hash tipo Entry")
 plt.legend()
 plt.show()
 
-plt.title("Memoria usada por las tablas")
-plt.xlabel('Numeros de claves porcesados')
+plt.title("Memoria usada por las tablas Hash")
+plt.xlabel('Numeros de claves procesados')
 plt.ylabel('Memoria (Mb)')
 plt.plot(lista_exp, lista_mem_ht, 'b^-', label="Hash Table")
 plt.plot(lista_exp, lista_mem_ct, 'gs-', label="Cuckoo Table")
+plt.plot(lista_exp, lista_mem_htE, 'r+-', label="Hash tipo Entry")
 plt.legend()
 plt.show()

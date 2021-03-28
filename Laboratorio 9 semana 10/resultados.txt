@@ -1,0 +1,1064 @@
+********** CUCKOO TABLE **********
+Numeros de Elementos a procesar: 500000...
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE **********
+Numeros de Elementos a procesar: 500000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE elementos tipo HashEntry **********
+Numeros de Elementos a procesar: 500000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+********** CUCKOO TABLE **********
+Numeros de Elementos a procesar: 1000000...
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE **********
+Numeros de Elementos a procesar: 1000000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE elementos tipo HashEntry **********
+Numeros de Elementos a procesar: 1000000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+********** CUCKOO TABLE **********
+Numeros de Elementos a procesar: 1500000...
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR FACTOR DE CARGA 0.7...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE **********
+Numeros de Elementos a procesar: 1500000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE elementos tipo HashEntry **********
+Numeros de Elementos a procesar: 1500000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+********** CUCKOO TABLE **********
+Numeros de Elementos a procesar: 2000000...
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE **********
+Numeros de Elementos a procesar: 2000000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE elementos tipo HashEntry **********
+Numeros de Elementos a procesar: 2000000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+********** CUCKOO TABLE **********
+Numeros de Elementos a procesar: 2500000...
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR FACTOR DE CARGA 0.7...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE **********
+Numeros de Elementos a procesar: 2500000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE elementos tipo HashEntry **********
+Numeros de Elementos a procesar: 2500000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+********** CUCKOO TABLE **********
+Numeros de Elementos a procesar: 3000000...
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR FACTOR DE CARGA 0.7...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE **********
+Numeros de Elementos a procesar: 3000000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE elementos tipo HashEntry **********
+Numeros de Elementos a procesar: 3000000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+********** CUCKOO TABLE **********
+Numeros de Elementos a procesar: 3500000...
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE **********
+Numeros de Elementos a procesar: 3500000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE elementos tipo HashEntry **********
+Numeros de Elementos a procesar: 3500000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+********** CUCKOO TABLE **********
+Numeros de Elementos a procesar: 4000000...
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING POR EXCESOS DE COLISIONES...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE **********
+Numeros de Elementos a procesar: 4000000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+
+********** HASH TABLE elementos tipo HashEntry **********
+Numeros de Elementos a procesar: 4000000...
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+
+*** REHASHING...
+*** REHASHING finalizado con éxito ***
+
+Lista tiempo_th TH
+ [4.964, 10.697, 18.819, 22.711, 35.422, 38.699, 44.325, 51.2]
+Lista Memoria HT
+ [68.135, 136.251, 219.984, 272.53, 348.621, 440.237, 499.003, 545.834]
+Lista tiempo_th THE
+ [5.423, 11.564, 18.984, 25.452, 36.078, 40.766, 44.215, 50.169]
+Lista Memoria HTE
+ [68.135, 136.251, 219.984, 272.53, 348.621, 440.237, 499.003, 545.834]
+Lista tiempo_th CT
+ [3.022, 6.69, 12.995, 13.984, 24.498, 25.206, 26.344, 29.847]
+Lista Memoria CT
+ [39.462, 78.937, 122.556, 157.973, 209.634, 245.386, 281.136, 316.53]

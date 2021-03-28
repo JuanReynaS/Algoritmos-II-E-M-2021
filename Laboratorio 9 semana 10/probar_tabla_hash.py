@@ -50,10 +50,11 @@ for i in range(m):
 
 
 # Se buscan claves existentes en la tabla de Hash en caso contrario
-# Si se encuentra la clavese retorna su String asociado, si no existe 
+# Si se encuentra la clavese retorna su String asociado, si no existe
 # se retorna None
+
 texto_ins = "\nSe buscan {} elementos el la tabla HASH\n".format(m // 2)
-print(texto_ins.center(50, "*")) 
+print(texto_ins.center(50, "*"))
 time.sleep(2)
 claves_buscadas = []
 for x in range(m):

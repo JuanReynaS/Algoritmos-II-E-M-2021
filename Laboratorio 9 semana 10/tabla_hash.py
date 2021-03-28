@@ -95,10 +95,11 @@ class crear_tabla(object):
             return True
 
     def buscar(self, c):
-        """ Dada un clave c, se busca el elemento en la tabla de hash que posea la
-            clave igual a c. Si el elemento se encuentra en la tabla, entonces se retorna
-            el String asociado a esa clave. En caso de que no haya ninguna clave c en la
-            tabla de hash, se retorna None. """
+        """ Dada un clave c, se busca el elemento en la tablade hash que posea
+            la clave igual a c. Si el elemento se encuentra en la tabla,
+            entonces se retorna el String asociado a esa clave.
+            En caso de que no haya ninguna clave c en la tabla de hash,
+            se retorna None. """
 
         assert(type(c) == int)
         indice = c % self.n
