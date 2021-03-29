@@ -125,7 +125,6 @@ class crear_tabla(object):
 
         print("\n*** REHASHING...")
         tabla_aux = crear_tabla(self.n * 2)
-        nlongitud = len(tabla_aux.tabla)
         self.elementos = 0
         for i in range(len(self.tabla)):
             if self.tabla[i] is not None:
@@ -135,8 +134,6 @@ class crear_tabla(object):
                     aux = aux.next
                     self.elementos += 1
 
-
-        # Activo con esta multiplicación
         self.n = self.n * 2
         self.tabla = tabla_aux.tabla
         print("*** REHASHING finalizado con éxito ***\n")

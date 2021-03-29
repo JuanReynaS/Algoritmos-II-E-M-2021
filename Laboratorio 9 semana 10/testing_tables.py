@@ -1,4 +1,15 @@
-import CuckooEntry as ce
+# Descripción: Cliente con el que se prueba y muestra el correcto funcionamiento
+#              de las operaciones de la cuckoo tabla.
+#               
+#             La ejecución de este módulo se hace a través de la siguiente
+#             línea de comando:
+#
+#             >./testing_tables n1 n2 n3...
+#
+# Creado por: Juan Reyna
+# email: 10-10883@usb.ve
+# version: 1.0
+
 import cuckoo_table as ct
 import tabla_hash as th
 import random as rd
@@ -132,7 +143,7 @@ for n in lista_exp:
     print("* Tiempo de ejecución de la tabla HASH: {} s".format(round(tiempo_th, 2)))
     print("* Consumo de Memoria de la tabla HASH: {} Mb".format(round(mem_th, 2)))
 
-    print("\n********** HASH TABLE TIPO ENTRY**********")
+    print("\n********** HASH TABLE TIPO ENTRY **********")
     print("* Longitud/Slots inicial de la tabla: {}".format(1021))
     print("* Longitud/Slots final de la tabla: {}".format(long_thE))
     print("* Agregados: {}, Eliminados: {}".format(e, f))

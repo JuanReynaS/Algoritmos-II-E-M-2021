@@ -1,3 +1,12 @@
+# Descripción: En este archivo se implementa el tipo de dato cuckoo table, haciendo
+#              uso de los tipo de datos cuckooEntry.
+#
+# Creado por: Juan Reyna
+# email: 10-10883@usb.ve
+# version: 1.0
+
+
+
 import CuckooEntry as ce
 
 
