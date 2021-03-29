@@ -29,11 +29,8 @@ def get_size(obj, seen=None):
     return size
 
 
-# n = int(sys.argv[1])
-lista_exp = [500000, 1000000, 1500000, 2000000, 2500000, 3000000,
-             3500000, 4000000]
+lista_exp = [int(i) for i in sys.argv[1:]]
 
-# lista_exp = [500000, 700000, 1000000, 1500000]
 
 lista_tiempo_ct = []
 lista_mem_ct = []
@@ -50,7 +47,7 @@ for n in lista_exp:
     lista_tupla = [(i, str(i)) for i in lista]
 
     ##########################################################################
-    print("********** CUCKOO TABLE **********")
+    print("\n********** CUCKOO TABLE **********")
     print("Numeros de Elementos a procesar: {}...".format(n))
     tm.sleep(3)
 
@@ -67,10 +64,12 @@ for n in lista_exp:
     fin = tm.time()
 
     tiempo_ct = fin - inicio
-    lista_tiempo_ct.append(round(tiempo_ct,3))
+    lista_tiempo_ct.append(round(tiempo_ct, 3))
+
+    long_ct = tabla.n
 
     mem_ct = (get_size(tabla.tabla1) + get_size(tabla.tabla2)) / (1024 ** 2)
-    lista_mem_ct.append(round(mem_ct,3))
+    lista_mem_ct.append(round(mem_ct, 3))
 
     ###########################################################################
     print("\n\n********** HASH TABLE **********")
@@ -90,6 +89,8 @@ for n in lista_exp:
 
     tiempo_th = fin - inicio
     lista_tiempo_ht.append(round(tiempo_th, 3))
+
+    long_th = tabla.n
 
     mem_th = get_size(tabla.tabla) / (1024 ** 2)
     lista_mem_ht.append(round(mem_th, 3))
@@ -114,49 +115,71 @@ for n in lista_exp:
     tiempo_thE = fin - inicio
     lista_tiempo_htE.append(round(tiempo_thE, 3))
 
+    long_thE = tabla.n
+
     mem_thE = get_size(tabla.tabla) / (1024 ** 2)
     lista_mem_htE.append(round(mem_thE, 3))
+
+# ####################### Imprimir resultados ##########################
+
+    print("======================= Imprimir resultados ==========================")
+
+    print("\n********** HASH TABLE **********")
+    print("* Longitud/Slots inicial de la tabla: {}".format(1021))
+    print("* Longitud/Slots final de la tabla: {}".format(long_th))
+    print("* Agregados: {}, Eliminados: {}".format(c, d))
+    print("* Elementos procesados: {}".format(c + d))
+    print("* Tiempo de ejecución de la tabla HASH: {} s".format(round(tiempo_th, 2)))
+    print("* Consumo de Memoria de la tabla HASH: {} Mb".format(round(mem_th, 2)))
+
+    print("\n********** HASH TABLE TIPO ENTRY**********")
+    print("* Longitud/Slots inicial de la tabla: {}".format(1021))
+    print("* Longitud/Slots final de la tabla: {}".format(long_thE))
+    print("* Agregados: {}, Eliminados: {}".format(e, f))
+    print("* Elementos procesados: {}".format(e + f))
+    print("* Tiempo de ejecución de la tabla HASH: {} s".format(round(tiempo_thE, 2)))
+    print("* Consumo de Memoria de la tabla HASH: {} Mb".format(round(mem_thE, 2)))
+
+    print("\n********** CUCKOO TABLE **********")
+    print("* Longitud/Slots inicial de la tabla: {}".format(1021))
+    print("* Longitud/Slots final de la tabla: {}".format(long_ct))
+    print("* Agregados: {}, Eliminados: {}".format(a, b))
+    print("* Elementos procesados: {}".format(a + b))
+    print("* Tiempo de ejecución de la Cuckoo tabla: {} s".format(round(tiempo_ct, 2)))
+    print("* Consumo de memoria de la Cuckoo tabla: {} Mb".format(round(mem_ct, 2)))
+    print("=======================================================================\n")
+
 
 
 
 # #############################################################################
 
-    # print("\n********** HASH TABLE **********")
-    # print("* Longitud/Slots de la tabla: {}".format(long_th))
-    # print("* Agregados: {}, Eliminados: {}".format(c, d))
-    # print("* Elementos procesados: {}".format(c + d))
-    # print("* Tiempo de ejecución de la tabla HASH: {} s".format(round(tiempo_th, 2)))
-    # print("* Consumo de Memoria de la tabla HASH: {} Mb".format(round(mem_th, 2)))
+respuesta = int(input("¿Desea mostrar gráficas de tiempo y memoria? \n1. Si\n2. No "))
+if respuesta == 1:
+    print("Lista tiempo_th TH\n", lista_tiempo_ht)
+    print("\nLista Memoria HT\n", lista_mem_ht)
+    print("\nLista tiempo_th THE\n", lista_tiempo_htE)
+    print("\nLista Memoria HTE\n", lista_mem_htE)
+    print("\nLista tiempo_th CT\n", lista_tiempo_ct)
+    print("\nLista Memoria CT\n", lista_mem_ct)
 
-    # print("\n********** CUCKOO TABLE **********")
-    # print("* Longitud/Slots de la tabla: {}".format(long_ct))
-    # print("* Agregados: {}, Eliminados: {}".format(a, b))
-    # print("* Elementos procesados: {}".format(a + b))
-    # print("* Tiempo de ejecución de la Cuckoo tabla: {} s".format(round(tiempo_ct, 2)))
-    # print("* Consumo de memoria de la Cuckoo tabla: {} Mb".format(round(mem_ct, 2)))
+    plt.title("Tiempo en procesar claves en tabla Hash")
+    plt.xlabel('Numeros de claves procesados')
+    plt.ylabel('Tiempo(seg)')
+    plt.plot(lista_exp, lista_tiempo_ht, 'ro-', label="Hash Table")
+    plt.plot(lista_exp, lista_tiempo_ct, 'b^-', label="Cuckoo Table")
+    plt.plot(lista_exp, lista_tiempo_htE, 'g+-', label="Hash tipo Entry")
+    plt.legend()
+    plt.show()
 
-print("Lista tiempo_th TH\n", lista_tiempo_ht)
-print("Lista Memoria HT\n", lista_mem_ht)
-print("Lista tiempo_th THE\n", lista_tiempo_htE)
-print("Lista Memoria HTE\n", lista_mem_htE)
-print("Lista tiempo_th CT\n", lista_tiempo_ct)
-print("Lista Memoria CT\n", lista_mem_ct)
+    plt.title("Memoria usada por las tablas Hash")
+    plt.xlabel('Numeros de claves procesados')
+    plt.ylabel('Memoria (Mb)')
+    plt.plot(lista_exp, lista_mem_ht, 'b^-', label="Hash Table")
+    plt.plot(lista_exp, lista_mem_ct, 'gs-', label="Cuckoo Table")
+    plt.plot(lista_exp, lista_mem_htE, 'r+-', label="Hash tipo Entry")
+    plt.legend()
+    plt.show()
+else:
+    pass
 
-
-plt.title("Tiempo en procesar claves en tabla Hash")
-plt.xlabel('Numeros de claves procesados')
-plt.ylabel('Tiempo(seg)')
-plt.plot(lista_exp, lista_tiempo_ht, 'ro-', label="Hash Table")
-plt.plot(lista_exp, lista_tiempo_ct, 'b^-', label="Cuckoo Table")
-plt.plot(lista_exp, lista_tiempo_htE, 'g+-', label="Hash tipo Entry")
-plt.legend()
-plt.show()
-
-plt.title("Memoria usada por las tablas Hash")
-plt.xlabel('Numeros de claves procesados')
-plt.ylabel('Memoria (Mb)')
-plt.plot(lista_exp, lista_mem_ht, 'b^-', label="Hash Table")
-plt.plot(lista_exp, lista_mem_ct, 'gs-', label="Cuckoo Table")
-plt.plot(lista_exp, lista_mem_htE, 'r+-', label="Hash tipo Entry")
-plt.legend()
-plt.show()
