@@ -20,7 +20,10 @@ import matplotlib.pyplot as plt
 
 
 def get_size(obj, seen=None):
-    """Recursively finds size of objects"""
+    """Recursively finds size of objects
+       creado por: Wissam Jarjoui
+       Origen del algoritmo en: https://goshippo.com/blog/measure-real-size-any-python-object/ 
+    """
     size = sys.getsizeof(obj)
     if seen is None:
         seen = set()
