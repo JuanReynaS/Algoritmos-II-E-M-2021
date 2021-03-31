@@ -1,0 +1,523 @@
+Cómo leer y escribir archivos en Python
+abril 26, 2019 Por Daniel Rodríguez Dejar un comentario
+Tiempo de lectura: 4 minutos
+
+
+Comparte
+Tuitea
+Pinear
+Comparte
+La importación y exportación de datos desde archivos son tareas que se realizan con bastante asiduidad. Por ello, en Python, librerías como pandas incorporan herramientas para el manejo de archivos CSV o en formato Microsoft Excel. Pero, si los datos no se encuentran en un formato estándar, estas herramientas pueden no ser las adecuadas. Por lo tanto, puede ser necesario manejar los archivos directamente. En esta entrada se va a mostrar cómo leer y escribir archivos en Python.
+
+Abrir un archivo para leer o escribir en Python
+Antes de leer o escribir archivos con Python es necesario es necesario abrir una conexión. Lo que se puede hacer con el comando open(), al que se le ha de indicar el nombre del archivo. Por defecto la conexión se abre en modo lectura, con lo que no es posible escribir en el archivo. Para poder escribir es necesario utilizar la opción "w" con la que se eliminará cualquier archivo existente y creará uno nuevo. Otra opción que se puede utilizar es "a", con la que se añadirá nuevo contenido al archivo existente. Las opciones se pueden ver en el siguiente código.
+
+# Abre el archivo para escribir y elimina los archivos anteriores si existen
+fic = open("text.txt", "w")
+# Abre el archivo para agregar contenido
+fic = open("text.txt", "a")
+# Abre el archivo en modo lectura
+fic = open("text.txt", "r")
+En todos los casos, una vez finalizado las operaciones de lectura y escritura con los archivos, una buena práctica es cerrar el acceso. Para lo que se debe utilizar el método close().
+
+Escribir archivos de texto en Python
+Antes guardar un archivo es necesario disponer de un vector con las cadenas de texto que se desean guardar. Para ello se puede crear un vector al que se le puede llamar data.
+
+data = ["Línea 1", "Línea 2", "Línea 3", "Línea 4", "Línea 5"]
+Para escribir el contenido de este vector en un archivo se puede hacer de dos maneras: línea a línea o de una sola vez.
+
+Escribir el archivo línea a línea
+El método más fácil directo para volcar el vector en un archivo es escribir el contenido línea a línea. Para ello se puede iterar sobre el archivo y utilizar el método write de archivo. Este proceso es lo que se muestra en el siguiente ejemplo.
+
+fic = open("text_1.txt", "w")
+for line in data:
+    fic.write(line)
+    fic.write("\n")
+    
+fic.close()
+Nótese que los elementos de vector no finalizan con el carácter salto de línea. Por lo tanto, es necesario añadir este después de escribir cada línea. Ya que, de lo contrario, todos los elementos se escribirían en una única línea en el archivo de salida.
+
+Una forma de escribir el archivo línea a línea sin que sea necesario incluir el salto de línea es con la función print. Para lo es necesario incluir la opción file con la conexión al archivo. Esta opción se puede ver en el siguiente ejemplo.
+
+fic = open("text_2.txt", "w")
+for line in data:
+    print(line, file=fic)
+    
+fic.close()
+Escribir el archivo de una vez
+Finalmente, en el caso de que los dato se encuentren en un objeto iterable se puede utilizar el método writelines para volcar este de golpe. Aunque es necesario tener en cuenta que este método no agrega el salto de línea, por lo que puede ser necesario agregarlo con antelación.
+
+fic = open("text_3.txt", "w")
+fic.writelines("%s\n" % s for s in data)
+fic.close()
+En el ejemplo se puede apreciar que se ha iterado sobre el vector para agregar el salto de línea para cada elemento.
+
+Leer archivos de texto en Python
+La lectura de los archivos, al igual que la escritura, se puede hacer de dos maneras: línea a línea o de una sola vez.
+
+Leer el archivo de una vez
+El procedimiento para leer los archivos de texto más sencillo es hacerlo de una vez con el método readlines. Una vez abierto el archivo solamente se ha de llamar a este método para obtener el contenido. Por ejemplo, se puede usar el siguiente código.
+
+fic = open('text_1.txt', "r")
+lines = fic.readlines()
+fic.close()
+En esta ocasión lines es un vector en el que cada elemento es una línea del archivo. Alternativamente, en lugar del método readlines se puede usar la función list para leer los datos.
+
+fic = open('text_1.txt', "r")
+lines = list(fic)
+fic.close()
+Leer el archivo línea a línea
+En otras ocasiones puede ser necesario leer el archivo línea a línea. Esto se puede hacer simplemente iterando sobre el fichero una vez abierto. En casa iteración se podrá hacer con cada línea cualquier operación que sea necesaria. En el siguiente ejemplo cada una de las líneas se agrega a un vector.
+
+fic = open('text_1.txt', "r")
+lines = []
+for line in fic:
+    lines.append(line)
+fic.close()
+Eliminar los saltos de línea en el archivo importado
+Los tres métodos que se han visto para leer los archivos importan el salto de línea. Por lo que puede ser necesario eliminarlo antes de trabajar con los datos. Esto se puede conseguir de forma sencilla con el método rstrip de las cadenas de texto de Python. Lo que se puede hacer iterando sobre el vector.
+
+[s.rstrip('\n') for s in lines]
+Conclusiones
+Hoy se ha visto cómo leer y escribir archivos en Python utilizando solamente las funciones estándar del lenguaje. Explicando tres métodos tanto para escribir los archivos como para leerlos. Aunque normalmente para la lectura de archivos CSV en Python lo más fácil es utilizar pandas, puede ser que sea necesario procesar los datos de una forma no estándar. En estas situaciones es cuando los visto en esta entrada es bastante útil.
+En este tutorial aprenderemos a utilizar diccionarios de datos en Python y algunos de sus métodos más importantes.
+
+Python es un lenguaje de programación interpretado de alto nivel y orientado a objetos, con el cual podemos crear todo tipo de aplicaciones. Entre sus diversos tipos de estructuras de datos, se encuentra "Diccionarios de Datos". En este tutorial aprenderemos a utilizar esta estructura revisando sus méetodos más utilizados.
+
+¿Qué es un Diccionario de datos?
+Un Diccionario es una estructura de datos y un tipo de dato en Python con características especiales que nos permite almacenar cualquier tipo de valor como enteros, cadenas, listas e incluso otras funciones. Estos diccionarios nos permiten además identificar cada elemento por una clave (Key).
+
+Para definir un diccionario, se encierra el listado de valores entre llaves. Las parejas de clave y valor se separan con comas, y la clave y el valor se separan con dos puntos.
+
+diccionario = {'nombre' : 'Carlos', 'edad' : 22, 'cursos': ['Python','Django','JavaScript'] }
+Podemos acceder al elemento de un Diccionario mediante la clave de este elemento, como veremos a continuación:
+
+print diccionario['nombre'] #Carlos
+print diccionario['edad']#22
+print diccionario['cursos'] #['Python','Django','JavaScript']
+También es posible insertar una lista dentro de un diccionario. Para acceder a cada uno de los cursos usamos los índices:
+
+print diccionario['cursos'][0]#Python
+print diccionario['cursos'][1]#Django
+print diccionario['cursos'][2]#JavaScript
+Para recorrer todo el Diccionario, podemos hacer uso de la estructura for:
+
+for key in diccionario:
+  print key, ":", diccionario[key]
+Métodos de los Diccionarios
+dict ()
+
+Recibe como parámetro una representación de un diccionario y si es factible, devuelve un diccionario de datos.
+
+dic =  dict(nombre='nestor', apellido='Plasencia', edad=22)
+
+dic → {‘nombre’ : 'nestor', ‘apellido’ : 'Plasencia', ‘edad’ : 22}
+zip()
+
+Recibe como parámetro dos elementos iterables, ya sea una cadena, una lista o una tupla. Ambos parámetros deben tener el mismo número de elementos. Se devolverá un diccionario relacionando el elemento i-esimo de cada uno de los iterables.
+
+dic = dict(zip('abcd',[1,2,3,4]))
+
+dic →   {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+items()
+
+Devuelve una lista de tuplas, cada tupla se compone de dos elementos: el primero será la clave y el segundo, su valor.
+
+dic =   {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+items = dic.items()
+
+items → [(‘a’,1),(‘b’,2),(‘c’,3),(‘d’,4)]
+keys()
+
+Retorna una lista de elementos, los cuales serán las claves de nuestro diccionario.
+
+dic =  {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+keys= dic.keys()
+
+keys→ [‘a’,’b’,’c’,’d’] 
+values()
+
+Retorna una lista de elementos, que serán los valores de nuestro diccionario.
+
+dic =  {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+values= dic.values()
+
+values→ [1,2,3,4] 
+clear()
+
+Elimina todos los ítems del diccionario dejándolo vacío.
+
+dic 1 =  {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+dic1.clean()
+
+dic1 → { }
+copy()
+
+Retorna una copia del diccionario original.
+
+dic = {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+dic1 = dic.copy()
+
+dic1 → {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+fromkeys()
+
+Recibe como parámetros un iterable y un valor, devolviendo un diccionario que contiene como claves los elementos del iterable con el mismo valor ingresado. Si el valor no es ingresado, devolverá none para todas las claves.
+
+dic = dict.fromkeys(['a','b','c','d'],1)
+
+dic →  {‘a’ : 1, ’b’ : 1, ‘c’ : 1 , ‘d’ : 1}
+get()
+
+Recibe como parámetro una clave, devuelve el valor de la clave. Si no lo encuentra, devuelve un objeto none.
+
+dic = {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+valor = dic.get(‘b’) 
+
+valor → 2
+pop()
+
+Recibe como parámetro una clave, elimina esta y devuelve su valor. Si no lo encuentra, devuelve error.
+
+dic = {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+valor = dic.pop(‘b’) 
+
+valor → 2
+dic → {‘a’ : 1, ‘c’ : 3 , ‘d’ : 4}
+setdefault()
+
+Funciona de dos formas. En la primera como get
+
+dic = {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+valor = dic.setdefault(‘a’)
+
+valor → 1
+Y en la segunda forma, nos sirve para agregar un nuevo elemento a nuestro diccionario.
+
+dic = {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+valor = dic.setdefault(‘e’,5)
+
+dic → {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4 , ‘e’ : 5}
+update()
+
+Recibe como parámetro otro diccionario. Si se tienen claves iguales, actualiza el valor de la clave repetida; si no hay claves iguales, este par clave-valor es agregado al diccionario.
+
+dic 1 = {‘a’ : 1, ’b’ : 2, ‘c’ : 3 , ‘d’ : 4}
+dic 2 = {‘c’ : 6, ’b’ : 5, ‘e’ : 9 , ‘f’ : 10}
+dic1.update(dic 2)
+
+dic 1 → {‘a’ : 1, ’b’ : 5, ‘c’ : 6 , ‘d’ : 4 , ‘e’ : 9 , ‘f’ : 10}
+Estos son algunos de los métodos más útiles y más utilizados en los Diccionarios. Python es un gran lenguaje de programación que nos permite programar de una manera realmente sencilla. Si deseas conocer mucho más y aprender a profundidad esta tecnología, ingresa al Curso de Python que tenemos en Devcode. ¡Te esperamos!
+
+¿Te gusto el tutorial?
+Ayúdanos a llegar a más personas
+
+ 
+ 
+user
+Carlos Eduardo Plasencia Prado
+Backend Developer | Python / Django junior - Javascript / Node.js
+
+@plasenciacar
+ython: Agregar y eliminar elementos de un diccionario
+Objetivo: mostrar cómo agregar y eliminar elementos de un diccionario en Python.
+
+En la anterior entrega explicamos el concepto de diccionario en Python y vimos el modo de crearlos. Hoy presentaremos dos técnicas básicas: la agregación y eliminación de elementos.
+
+Comencemos con la creación de un par de diccionarios de ejemplo sobre los que practicaremos desde el intérprete interactivo:
+
+>>> gazpacho = {}
+>>> menda = {'Nombre':'Javier', 'Apellido':'Montero'}
+El primero, gazpacho, es un simple diccionario vacío que utilizaremos para almacenar la receta del gazpacho; el otro, menda, recoge algunos datos sobre mi persona. Más adelante veremos que podemos crear estructuras de datos más complejas, basadas en los diccionarios, que podremos emplear para mantener una agenda de nuestros contactos personales y sin necesidad de recurrir a un gestor de bases de datos.
+
+Para agregar un par clave-valor a un diccionario, recurrimos a la siguiente sintaxis:
+
+diccionario[clave] = valor
+
+Probémoslo con gazpacho:
+
+>>> gazpacho['Aceite'] = '300 ml'
+
+Verificamos que gazpacho, que antes estaba vacío, ahora contiene ese par:
+
+>>> gazpacho
+{'Aceite': '300 ml'}
+Continuemos con la receta secreta:
+
+>>> gazpacho['Vinagre'] = '100 ml'
+>>> gazpacho['Pepino'] = 1
+>>> gazpacho['Pimiento'] = 1
+Veamos cómo evoluciona nuestra creación:
+
+>>> gazpacho
+{'Pimiento': 1, 'Aceite': '300 ml', 'Vinagre': '100 ml', 'Pepino': 1}
+Observa la salida de esta última instrucción y recuerda lo que dijimos sobre el orden de los diccionarios: no son una estructura ordenada, aunque veremos formas de hacerlos más presentables si lo deseamos.
+
+Añadamos nuevos elemendos al menda:
+
+>>> menda['URL'] = 'http://www.elclubdelautodidacta.es'
+>>> menda['Twitter'] = '@pradery'
+tras lo cual,
+
+>>> menda
+{'URL': 'http://www.elclubdelautodidacta.es', 'Nombre': 'Javier', 'Twitter': '@pradery', 'Apellido': 'Montero'}
+Las claves han de ser únicas. Si tratamos de agregar otra ya existente, simplemente el valor nuevo sustituirá al antiguo:
+
+>>> gazpacho['Pimiento'] = 2
+>>> menda['URL'] = 'http://elclubdelautodidacta.es/wp/'
+Observa cómo los valores correspondientes son actualizados:
+
+>>> gazpacho
+{'Pimiento': 2, 'Aceite': '300 ml', 'Vinagre': '100 ml', 'Pepino': 1}
+>>> menda
+{'URL': 'http://elclubdelautodidacta.es/wp/', 'Nombre': 'Javier', 'Twitter': '@pradery', 'Apellido': 'Montero'}
+Para borrar un par clave-valor de un diccionario disponemos de la sentencia del, que emplearemos del siguiente modo:
+
+del diccionario[clave]
+
+Por ejemplo:
+
+>>> del gazpacho['Aceite']
+>>> gazpacho
+{'Pimiento': 2, 'Vinagre': '100 ml', 'Pepino': 1}
+>>> del menda['URL']
+>>> menda
+{'Nombre': 'Javier', 'Twitter': '@pradery', 'Apellido': 'Montero'}
+Con del podríamos cargarnos incluso el objeto completo:
+
+>>> del gazpacho
+
+A partir de este momento el gazpacho ha dejado de existir y ha pasado a mejor vida:
+
+>>> gazpacho
+Traceback (most recent call last):
+  File "<pyshell#28>", line 1, in <module>
+    gazpacho
+NameError: name 'gazpacho' is not defined
+Y con menda mejor no lo hago, no sea que traiga mala suerte…
+
+Javier Montero Gabarró
+
+Python: Agregar y eliminar elementos de un diccionario
+
+El texto de este artículo se encuentra sometido a una licencia Creative Commons del tipo CC-BY-NC-ND (reconocimiento, no comercial, sin obra derivada, 3.0 unported)
+
+El Club del Autodidacta
+
+Consulta el índice completo de artículos relacionados con Python.
+
+Tal vez te interese...
+Python – Buscando a Wally.txt
+Python – Troceando desde el lado izquierdo
+Comparando objetos en Python
+Python – Sumando objetos
+Python – Una tortuga de brocha fina
+¿Conoces a alguien a quien le pueda interesar este artículo?
+Haz clic para compartir en Facebook (Se abre en una ventana nueva)Haz clic para compartir en Twitter (Se abre en una ventana nueva)
+Autor Javier MonteroPublicado el07/08/2012CategoríaspythonEtiquetasdel, diccionarios, python
+16 opiniones en “Python: Agregar y eliminar elementos de un diccionario”
+Isaac Lacoba (@IsaacLacoba)dice:
+31/12/2012 a las 13:10
+Gracias por tu post. Me ha ahorrado bastante tiempo. 😉
+
+Responder
+Javier Monterodice:
+02/01/2013 a las 19:39
+Me alegro de que te haya sido útil. Saludos. 🙂
+
+Responder
+luisdice:
+17/10/2016 a las 05:02
+queria saber si se puede eliminar solo un elemento dentro de una cadena de un diccionario
+ejemplo:
+diccionario = {hola:mundo, 3:tres,nombre:[luis,arturo,carlos]}
+
+en este caso quiero elimanr carlos, se pude eiminar?
+
+Responder
+Javier Monterodice:
+21/10/2016 a las 19:08
+Buentas tardes, Luis:
+
+Hay varias cosas que podrías hacer. Partimos de tu diccionario:
+
+>>> diccionario = { ‘hola’: ‘mundo’, 3 : ‘tres’, ‘nombre’ :[‘luis’ ,’arturo’, ‘carlos’]}
+
+(sé cuidadoso a la hora de escribir los strings, no olvides que deben aparecer entrecomillados)
+
+La primera posibilidad es sustituir la entrada correspondiente del diccionario por el una nueva lista actualizada:
+
+>>> diccionario[‘nombre’] = [‘luis’, ‘arturo’]
+>>> diccionario
+{‘nombre’: [‘luis’, ‘arturo’], 3: ‘tres’, ‘hola’: ‘mundo’}
+
+Pero podría no ser una solución cómoda si la lista fuera grande.
+
+Lo más elegante sería modificar «in situ» la propia lista. Veamos cómo se hace:
+
+Primero regeneramos el diccionario a su valor inicial
+
+>>> diccionario = { ‘hola’: ‘mundo’, 3 : ‘tres’, ‘nombre’ :[‘luis’ ,’arturo’, ‘carlos’]}
+
+y eliminamos ‘carlos’ in situ:
+
+>>> diccionario[‘nombre’].remove(‘carlos’)
+
+>>> diccionario
+{‘nombre’: [‘luis’, ‘arturo’], 3: ‘tres’, ‘hola’: ‘mundo’}
+
+Observa que diccionario[‘nombre’] es una lista. Para eliminar un elemento in situ de la lista hemos usado el método remove de las listas.
+
+Saludos
+
+Responder
+Joysdice:
+10/07/2019 a las 13:37
+Si, hay una serie de claves para hacer eso, si mo me equivoco creo que es con pop
+
+Responder
+Alejandradice:
+29/07/2014 a las 02:57
+https://www.youtube.com/watch?v=UboUIZ7Dn0E&feature=youtu.be
+
+Mira este link para eliminar una llave de un diccionario en python
+
+Responder
+Chermandice:
+12/02/2016 a las 20:45
+Muchas Gracias me salvaste!
+
+Responder
+Javier Monterodice:
+20/02/2016 a las 15:59
+Un placer. Me alegro de que te haya servido.
+Saludos
+
+Responder
+Juan Joaquin Maidana Bernardidice:
+04/02/2017 a las 16:46
+necesito agregar un valor al diccionario, sin que me modifique o reemplace ningún otro de los valores. como podría hacer eso ?. Cabe aclarar que tengo un diccionario con 12 valores y quiero mandar el numero 13. y utilizando una variable de ingreso y asignándolo a otra variable.
+
+Responder
+Javier Monterodice:
+07/02/2017 a las 09:38
+Buenos días, Juan:
+Si no quieres que el valor asociado a una determinada clave de un diccionario se modifique tendrás que comprobar de algún modo que esa clave no exista previamente. Puedes recurrir al operador in. Observa este uso simple para comprobar la existencia o no de una clave particular:
+>>> rollings = {'mick':'jagger', 'keith':'richards'}
+>>> 'keith' in rollings
+True
+
+Agrega, entonces un simple if que verifique que tu clave no exista previamente.
+Saludos
+Responder
+Joysdice:
+10/07/2019 a las 13:39
+Creo que es con append y poner en corchete la ubicación, busca las claves para hacer cosas en los diccionarios y te saldrán muchas
+
+Responder
+carlos Navarrodice:
+15/06/2017 a las 17:58
+Buenas, Quisiera poder sumar el numero entero de cada uno de los vendedores dentro de mi Diccionario. Ejemplo:
+
+mi_diccionario = { ‘vendedor1’: 3000, ‘vendedor2’: 5000, ‘vendedor3’: 2000 }
+
+Necesito tener alrededor de 20-30 vendedores y cada uno con enteros diferentes, Como hago para sumar solo el numero entero de cada vendedor?
+
+En este caso deberia de dar 10000
+
+Responder
+Hugodice:
+15/09/2017 a las 15:31
+Asi podria ser?
+
+mi_diccionario = { ‘vendedor1’: 3000, ‘vendedor2’: 5000, ‘vendedor3’: 2000, ‘vendedor4’: 7000 }
+
+suma = 0
+
+for i in mi_diccionario.values():
+suma += i
+
+print (suma)
+
+Responder
+Hugodice:
+15/09/2017 a las 15:25
+Javier, una consulta: es posible agregar mas de un valor a un diccionario? Saludos!
+
+Responder
+Hugodice:
+15/09/2017 a las 15:26
+Me referia, mas de un valor a una clave 🙂
+
+Responder
+Lucas Corsodice:
+19/09/2019 a las 22:06
+Muchas gracias, fácil de entender.
+
+Responder
+Deja un comentario
+
+Navegación de entradas
+ANTERIOR
+Entrada anterior:Construcción de acordes – 18: Séptima con novena aumentada
+SIGUIENTE
+Entrada siguiente:LaTeX: La integral definida
+LA SUERTE ESTÁ ECHADA
+
+ECDA EN FACEBOOK
+
+PARA QUE NO TE PIERDAS…
+Índice global por fechas
+Indice – Armonía
+Armonía – Índice de lectura recomendado
+Indice – Guitarra
+Indice – MuseScore
+Indice – Python
+Indice – Java
+Índice – LaTeX
+Indice – Productividad
+ENTRADAS RECIENTES
+Armonización de la escala menor armónica en las 12 tonalidades
+Los modos de la escala menor armónica – 2
+Python – Buscando a Wally.txt
+Los modos de la escala menor armónica – 1
+Python – Troceando desde el lado izquierdo
+Acordes en disposición Drop 3
+LaTeX – Control de la numeración de las listas
+Acordes en disposición Drop 2
+Java – Un paseo por Eclipse
+La escala mayor en las 12 tonalidades – Cuadro
+CATEGORÍAS
+Categorías
+Elegir la categoría
+BUSCAR EN ECDA
+Buscar por:
+Buscar …
+BUSCAR
+ÚLTIMOS COMENTARIOS
+Diego de los Santos en Los modos de la escala menor melódica – 1
+gustavo en Construcción de acordes – 6: Sexta y menor sexta
+ArleyB en Python: Los operadores lógicos y sus tablas de verdad
+Felipe Manzano en Python – Capítulo 13: Recorriendo una lista con la sentencia FOR
+Roberto en Python: Vida y muerte de una variable
+SUSCRÍBETE A ECDA
+Introduce tu correo electrónico si deseas recibir notificaciones cada vez que se publique un nuevo artículo
+
+Dirección de correo electrónico
+Dirección de correo electrónico
+
+SUSCRIBIR
+
+SÍGUEME EN TWITTER
+
+ALGUIEN DIJO...
+Con los libros ocurre lo mismo que con las personas: hay que tomarlos en serio.
+
+— Cesare Pavese
+Próxima cita »
+Música
+expande el menú inferior
+Programación
+expande el menú inferior
+Otros
+expande el menú inferior
+El Club del Autodidacta Funciona gracias a WordPress

@@ -4,8 +4,8 @@ import sys
 def esPalabraValida(s):
     assert(type(s) == str)
  
-    self.lista1 = [i for i in st.ascii_letters]
-    self.lista1.insert(14,"ñ")
+    lista1 = [i for i in st.ascii_letters]
+    lista1.insert(14,"ñ")
 
     for letra in lista1:
         if not (letra in st.ascii_lowercase):
