@@ -26,26 +26,31 @@ class crearPMLI(object):
         return self.pal.buscar(p)
 
     def mostrar(self):
-        print("\n\n")
         print(Fore.BLACK  + Back.WHITE + "Letra: {}".format(self.l) + Fore.RESET + Back.RESET)
+        print(" ")
         e = 0
         c = 0
         d = 1
         for i in sorted([j for j in self.pal.tabla if j is not None]):
-            print(Cursor.FORWARD(e) + "*{}".format(i))        
-            c += 1
+            if c < 10:    
+                print(Cursor.FORWARD(e) + "* {}".format(i))        
+                
+                c += 1
 
-            if c == 10:
+            elif c == 10:
                 if d == 4:
+                    print("-----------------------------------------------------------------------")
+                    print(Cursor.BACK(20))
                     e = 0
-                    print("\n\n")
-                    print(Cursor.BACK(e) + "{}".format(i))
-                    d = 0
+                    d = 1
                     c = 1
-                    print("#############################################")
+
                 else:
                     e += 20
-                    print(Cursor.FORWARD(e) +  Cursor.UP(10) + "{}".format(i))
+                    print(Cursor.FORWARD(e) +  Cursor.UP(10) + "* {}".format(i))
                     c = 1
                     d += 1
+                    
+
+        
 

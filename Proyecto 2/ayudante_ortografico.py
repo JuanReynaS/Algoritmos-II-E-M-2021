@@ -2,6 +2,7 @@ import string as st
 import pmli as pm 
 import sys
 import operator as op
+from colorama import Cursor, init, Fore, Style, Back
 
 class crearAyudante():
     def __init__(self):
@@ -33,16 +34,16 @@ class crearAyudante():
     def cargarDiccionario(self, fname):
         with open(fname) as archivo:
             for linea in archivo:
-                linea = linea[:-1].lower()
+                linea = linea[:-1]
                 # print(linea)
                 if self.esPalabraValida(linea) is True:
                     for i in range(self.MAX):
                         if self.dicc[i].l == linea[0] and  not linea.isspace():
-                            #print(i, self.dicc[i].l, len(self.dicc))
-                            #resolver las lineas en blamco
                             self.dicc[i].agregarPalabra(linea)
                             break              
                 else:
+                    print(Fore.RED + Back.WHITE + Style.BRIGHT + "Alerta palabra: {} no válida para el diccionario".format(linea) + Fore.RESET + Back.RESET)
+                    sys.exit()
                     return
 
     def borrarPalabra(self, p):
@@ -58,21 +59,23 @@ class crearAyudante():
                 return True
 
     def mostrar(self):
+        
         for i in range(self.MAX):
-            self.dicc[i].mostrar() 
-            print("\n")
+            self.dicc[i].mostrar()
+            print(Cursor.DOWN(10) + "\n")
+
 
     def corregirTexto(self, finput):
         lista_let = []
         with open(finput) as archivo:
             lista_archi = "".join(archivo.readlines()).split()
-            # print(lista_archi)
+
             for casilla in lista_archi:
                 if self.esPalabraValida(casilla) is True:
                     lista_let.append(casilla)
                 else:
                     aux = ""
-                    #rint(casilla)
+
                     for l in  casilla:
                         if (l in st.punctuation) or (l in st.digits) or (l in st.whitespace):
                             if len(aux) > 0:
@@ -138,7 +141,7 @@ class crearAyudante():
 helpo = crearAyudante()
 helpo.cargarDiccionario(sys.argv[1])
 
-# print(helpo.mostrar())
+helpo.mostrar()
 
 # elpo.borrarPalabra(sys.argv[2])
 # helpo.buscarPalabra(sys.argv[3])
