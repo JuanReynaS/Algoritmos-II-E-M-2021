@@ -324,200 +324,468 @@ Javier Monterodice:
 02/01/2013 a las 19:39
 Me alegro de que te haya sido útil. Saludos. 🙂
 
-Responder
-luisdice:
-17/10/2016 a las 05:02
-queria saber si se puede eliminar solo un elemento dentro de una cadena de un diccionario
-ejemplo:
-diccionario = {hola:mundo, 3:tres,nombre:[luis,arturo,carlos]}
 
-en este caso quiero elimanr carlos, se pude eiminar?
+About
+Prensa
+Legal
+Política de privacidad
+Términos de Servicio
+Cookie Policy
+STACK EXCHANGE
+NETWORK
+Technology
+Life / Arts
+Culture / Recreation
+Science
+Other
+Blog
+Facebook
+Twitter
+LinkedIn
+Instagram
+diseño del sitio / logo © 2021 Stack Exchange Inc; contribuciones de los usuarios bajo licencia cc by-sa. rev 2021.3.30.38947
+Mujercitas (película de 2019)
+Ir a la navegaciónIr a la búsqueda
+Little Women
+Mujercitas 2019.png
+Título	Mujercitas
+Ficha técnica
+Dirección	
+Greta Gerwig
+Producción	Denise Di Novi
+Amy Pascal
+Robin Swicord
+Arnon Milchan
+Guion	Greta Gerwig
+Basada en	Mujercitas, de Louisa May Alcott
+Música	Alexandre Desplat
+Fotografía	Yorick Le Saux
+Protagonistas	Saoirse Ronan
+Timothée Chalamet
+Florence Pugh
+Eliza Scanlen
+James Norton
+Laura Dern
+Emma Watson
+Louis Garrel
+Meryl Streep
+Bob Odenkirk
+Chris Cooper
+Ver todos los créditos (IMDb)
+Datos y cifras
+País	Estados Unidos
+Año	2019
+Estreno	
+25 de diciembre de 2019 (Estados Unidos)
+Género	Drama
+Romance
+Duración	134 minutos
+Idioma(s)	Inglés
+Compañías
+Productora	Columbia Pictures
+Di Novi Pictures
+Pascal Pictures
+New Regency Pictures
+Sony Pictures Entertainment
+Distribución	Sony Pictures Releasing
+InterCom
+Presupuesto	US$40.000.000
+Recaudación	US$205.914.9761​
+Ficha en IMDb
+Ficha en FilmAffinity
+[editar datos en Wikidata]
+Mujercitas2​3​ (en inglés Little Women) es una película dramática estadounidense de 2019 escrita y dirigida por Greta Gerwig. Es la séptima adaptación cinematográfica de la novela de 1868 del mismo nombre de Louisa May Alcott. Narra las vidas de las hermanas March, Jo, Meg, Amy y Beth, en Concord, Massachusetts, durante el siglo XIX. Está protagonizada por un reparto coral compuesto por Saoirse Ronan, Emma Watson, Florence Pugh, Eliza Scanlen, Laura Dern, Timothée Chalamet, Meryl Streep, Tracy Letts, Bob Odenkirk, James Norton, Louis Garrel y Chris Cooper. Gerwig altera cronológicamente la trama de la obra y alterna pasajes de los primeros años de las niñas con su vida profesional, con la intención de hacer una nueva visión de la novela tras 150 años, haciendo hincapié en el subtexto feminista de la obra4​. En la nueva versión, además, se fusiona el texto original con la vida de Louisa May Alcott, de quien Jo era una especie de alter ego5​.
 
-Responder
-Javier Monterodice:
-21/10/2016 a las 19:08
-Buentas tardes, Luis:
+Sony Pictures inició el desarrollo de la película en 2013, Amy Pascal se incorporó para producir en 2015 y Gerwig fue contratada para escribir su guion al año siguiente. Usando otros escritos de Alcott como inspiración, Gerwig escribió el guion en 2018. Fue nombrada directora ese mismo año, tras su triunfo con Lady Bird, y es la segunda película dirigida por la directora, nominada a los Premios Óscar en 2018.6​ La filmación se llevó a cabo de octubre a diciembre de 2018 en el estado de Massachusetts, y la edición comenzó el día después del final de la filmación.
 
-Hay varias cosas que podrías hacer. Partimos de tu diccionario:
+Mujercitas se estrenó en el Museo de Arte Moderno de la ciudad de Nueva York el 7 de diciembre de 2019 y se estrenó en cines en los Estados Unidos el 25 de diciembre de 2019 por Sony Pictures Releasing. La película recibió elogios de la crítica,7​ con elogios especiales por el guion y la dirección de Gerwig, así como por las actuaciones del elenco, y recaudó 216 millones de dólares en todo el mundo. Entre sus numerosos elogios, la película recibió seis nominaciones a los Premios de la Academia, incluyendo Mejor Película, Mejor Actriz (Ronan), Mejor Actriz de Reparto (Pugh) y Mejor Guion Adaptado, y ganó el Premio al Mejor Diseño de Vestuario. También recibió nominaciones para los Premios BAFTA y los Globos de Oro.
 
->>> diccionario = { ‘hola’: ‘mundo’, 3 : ‘tres’, ‘nombre’ :[‘luis’ ,’arturo’, ‘carlos’]}
 
-(sé cuidadoso a la hora de escribir los strings, no olvides que deben aparecer entrecomillados)
+Índice
+1	Argumento
+2	Reparto
+3	Producción
+3.1	Desarrollo y casting
+3.2	Escritura
+3.3	Diseño de vestuario
+3.4	Filmación y edición
+4	Estreno
+5	Recepción
+5.1	Taquilla
+5.2	Crítica
+5.3	Premios y nominaciones
+6	Referencias
+7	Enlaces externos
+Argumento
+En 1868, Jo March, profesora de la ciudad de Nueva York, acude al Sr. Dashwood, un editor que acepta publicar una historia que ha escrito. Su hermana menor, Amy, que está en París con la tía March, asiste a una fiesta con su amigo de la escuela y vecino, Laurie. Amy se enoja por el comportamiento de Laurie, que se encuentra ebrio y se burla de ella por su intención de casarse con el rico empresario Fred Vaughn. En Nueva York, Jo se siente herida cuando Friedrich Bhaer, un profesor enamorado de ella, critica constructivamente sus escritos, lo que hace que dé por terminada su amistad. Después de enterarse por una carta de que la enfermedad de su hermana menor Beth ha empeorado, Jo regresa a su casa en Concord, Massachusetts.
 
-La primera posibilidad es sustituir la entrada correspondiente del diccionario por el una nueva lista actualizada:
+Siete años antes, en una fiesta con su hermana mayor, Meg, Jo se hace amiga de Laurie. La mañana de Navidad, la madre de las niñas, "Marmee", las convence para que den su desayuno a su pobre vecina, la señora Hummel, y a sus hijos hambrientos. Cuando regresan a casa, encuentran una mesa llena de comida que les trajo su vecino y abuelo de Laurie, el Sr. Laurence. Marmee les a las hermanas una carta de su padre, que lucha en la Guerra Civil Estadounidense. Jo visita regularmente a la tía March para leerle, con la esperanza de que la tía March la invite a viajar por Europa.
 
->>> diccionario[‘nombre’] = [‘luis’, ‘arturo’]
->>> diccionario
-{‘nombre’: [‘luis’, ‘arturo’], 3: ‘tres’, ‘hola’: ‘mundo’}
+Cuando Meg, Jo, Laurie y John Brooke -el tutor de Laurie y futuro esposo de Meg-, van al teatro, Amy celosa, quema los manuscritos de Jo. A la mañana siguiente, Amy, quiere reconciliarse con Jo, la persigue mientras Jo va con Laurie hasta un lago donde patinan. Laurie y Jo salvan a Amy tras hundirse en el agua fría de invierno. El Sr. Laurence invita a la pequeña Beth a tocar el piano de su difunta hija en su casa.
 
-Pero podría no ser una solución cómoda si la lista fuera grande.
+De vuelta al presente, Meg habla con su marido, John, tras comprar una tela tan cara que no podían pagar y le expresa su decepción por ser pobre. En Europa, Laurie visita a Amy -quien ha decidido abandonar su carrera como pintora- para disculparse por su comportamiento de la noche anterior y le ruega que no se case con Fred, y que acepte su propia petición de matrimonio. Aunque está enamorada de Laurie, Amy se niega, molesta por ser siempre segundo plato, tras la negativa que Jo le dio a Lauire ante la misma petición. Aun así, Amy rechaza la propuesta de Fred y acepta la de Laurie.
 
-Lo más elegante sería modificar «in situ» la propia lista. Veamos cómo se hace:
+Jo recuerda cuando tuvo que cortarse el pelo para que su madre pudiese viajar a Nueva York a cuidar de su padre, que había sido herido en guerra. Por entonces el Sr. Laurence regaló su piano a Beth y descubrieron quela niña había contraído la escarlatina, posiblemente en casa de los Hummel. Para evitar contraer la enfermedad, Amy es enviada a quedarse con la tía March, quien le aconseja que mantenga a su familia formalizando un buen matrimonio. Beth se recupera a tiempo para la Navidad del pasado, durante la cual su padre también regresa a casa Meg y John Brooke se comprometen. Jo intenta convencerla de que huya, pero Meg expresa su alegría por casarse con John. La tía March anuncia su viaje por Europa, pero se lleva a Amy en lugar de Jo. Tras la boda, Laurie le propone matrimonio a Jo, quien lo rechaza y le explica que no quiere casarse.
 
-Primero regeneramos el diccionario a su valor inicial
+En el presente, John pide a Meg que convierta la cara tela en un vestido si le hace feliz. Meg revela que la había vendido y le asegura que es feliz tal y como viven. Tras el empeoramiento, Beth fallece. Marmee informa a la familia de que Amy regresa de Europa con una tía March enferma. Jo se pregunta a sí misma si se apresuró a rechazar la proposición de matrimonio de Laurie y le escribe una carta. Amy se prepara para abandonar Europa y le dice a Laurie que ha rechazado la propuesta de Fred; se besan y luego se casan en el viaje de retorno a casa. Jo y Laurie acuerdan ser solo amigos, y se deshace de la carta que le escribió y no llegó a enviar. Jo comienza a escribir una novela basada en la vida de ella y sus hermanas y envía los primeros capítulos a un poco impresionado Sr. Dashwood. Bhaer sorprende a Jo al presentarse en la casa March camino a California.
 
->>> diccionario = { ‘hola’: ‘mundo’, 3 : ‘tres’, ‘nombre’ :[‘luis’ ,’arturo’, ‘carlos’]}
+En Nueva York, el Sr. Dashwood acepta publicar la novela de Jo pues sus propias hijas exigen saber cómo termina la historia, pero se niega a aceptar que la protagonista permanezca soltera al final. Para apaciguarlo, Jo termina su novela con la protagonista, ella misma, impidiendo que Bhaer se vaya a California. Negocia con éxito derechos de autor y regalías con el Sr. Dashwood. Tras el fallecimiento de la tía March, Jo hereda su casa y la abre como una escuela para niñas y niños, donde enseñan Meg, Amy, John y Bhaer. Jo observa la impresión de su novela, titulada Mujercitas.
 
-y eliminamos ‘carlos’ in situ:
+Reparto
+Saoirse Ronan como Josephine "Jo" March.
+Emma Watson como Margaret "Meg" March.
+Florence Pugh como Amy March.
+Eliza Scanlen como Elizabeth "Beth" March.
+Laura Dern como Marmee March.
+Timothée Chalamet como Theodore "Laurie" Laurence.
+Meryl Streep como Tía March.
+Tracy Letts como el Señor Dashwood.
+Bob Odenkirk como el padre de la familia March.
+James Norton como John Brooke.
+Louis Garrel como Friedrich Bhaer.
+Chris Cooper como el Señor Laurence.
+Jayne Houdyshell como Hannah.
+Rafael Silva como el amigo de Friedrich.
+Dash Barber como Fred Vaughn.
+Hadley Robinson como Sallie Gardiner Moffat.
+Abby Quinn como Annie Moffat.
+Maryann Plunkett como la Señora Kirke.
+Edward Fletcher como el sirviente del Señor Laurence.
+Sasha Frolova como la Señora Hummel.
+Producción
+Desarrollo y casting
+En octubre de 2013, se anunció que una nueva adaptación cinematográfica de la novela Mujercitas de Louisa May Alcott estaba en desarrollo en Sony Pictures, con Olivia Milch escribiendo el guion y Robin Swicord y Denise Di Novi como productoras.8​ En marzo de 2015, Amy Pascal se unió como productora de la nueva adaptación, y Sarah Polley fue contratada para escribir el guion y potencialmente dirigir.9​ En última instancia, la participación de Polley nunca fue más allá de las discusiones iniciales.10​ En agosto de 2016, Greta Gerwig fue contratada para escribir el guion.11​ En junio de 2018, Gerwig fue anunciado como el director de la película además de ser su guionista.12​ Se había enterado de los planes de Sony para adaptar el libro en 2015 e instó a su agente a que la pusiera en contacto con el estudio, admitiendo que si bien ella "no estaba en la lista de nadie para dirigir esta película", era algo a lo que aspiraba hacer, citando cómo el libro la inspiró a convertirse en escritora y directora.13​ Además de ser la primera película de estudio de Gerwig que dirigió, Mujercitas fue su segundo esfuerzo como directora en solitario.14​15​
 
->>> diccionario[‘nombre’].remove(‘carlos’)
+También se anunció en junio de 2018 que Meryl Streep, Emma Watson, Saoirse Ronan, Timothée Chalamet y Florence Pugh habían sido elegidos para papeles no revelados.16​ Gerwig había trabajado con Ronan y Chalamet en su primera película como directora en solitario, Lady Bird,17​ mientras buscaba elegir a Pugh después de ver su actuación en la película Lady Macbeth.18​ Eliza Scanlen, a quien Gerwig vio protagonizar la miniserie Sharp Objects,19​ se unió al elenco al mes siguiente.20​ James Norton y Laura Dern fueron elegidos en agosto.21​22​ Ese mismo mes, Emma Watson se unió al elenco, reemplazando a Stone, quien tuvo que abandonar debido a conflictos de programación con la promoción de La Favorita.23​ En septiembre, Louis Garrel, Bob Odenkirk y Chris Cooper se unieron al elenco en papeles secundarios.24​25​26​ New Regency Pictures fue anunciado como un financiador adicional de la película en octubre.27​
 
->>> diccionario
-{‘nombre’: [‘luis’, ‘arturo’], 3: ‘tres’, ‘hola’: ‘mundo’}
+Escritura
+Gerwig comenzó a escribir el guion durante un viaje a Big Sur, California, luego de la ceremonia de los Premios de la Academia 2018, utilizando como inspiración las cartas y diarios de Alcott, así como "pinturas de mujeres jóvenes del siglo XIX".19​ También se inspiró en las otras historias de Alcott para los diálogos.28​ Gerwig escribió muchas líneas de diálogo superpuestas que se "leerían una encima de la otra".29​ Además, afirmó que un monólogo de la película se inspiró en una conversación que tuvo con Streep sobre "los desafíos que enfrentaban las mujeres en el Década de 1860".30​ Para "enfocar la película en [sus personajes] como adultos", Gerwig incorporó una línea de tiempo no lineal.31​ El final difiere del de la novela al describir "los placeres de un romance dentro de una historia sobre Alcott realizando sus ambiciones artísticas", que Gerwig creía que honra la verdadera visión de Alcott dado que Alcott tenía que "satisfacer las expectativas narrativas de la época".32​33​
 
-Observa que diccionario[‘nombre’] es una lista. Para eliminar un elemento in situ de la lista hemos usado el método remove de las listas.
+Diseño de vestuario
+La película requirió "aproximadamente 75 trajes de época principales", cada uno de los cuales tomó "aproximadamente 40 horas" para crear.19​ La diseñadora de vestuario, Jacqueline Durran, combinó "un espíritu de vestuario libre" y "la rigidez victoriana tradicional" al vestir a los personajes.34​ Queriendo hacer que "la ropa vintage pareciera codiciada para el espectador moderno", combinó "etiquetas de lana" con "faldas a cuadros de muy buen gusto", "capas largas de color carmesí" y "gorras de vendedor de periódicos".35​ Distinguió los guardarropas de la infancia y la edad adulta de los personajes teniendo en cuenta "la lógica interna de cada uno" y manteniendo "la conexión entre los dos", y a cada personaje se le asignó un "color central", incluido el rojo para el personaje de Ronan, el verde y el lavanda para Watson, marrón y rosa para Scanlen y azul claro para Pugh.36​ También hizo que los personajes compartieran y reutilizaran las mismas piezas de vestuario para reforzar sus relaciones entre ellos.37​ Además de diseñar el personaje de Ronan con "vestidos holgados de algodón" y "faldas de lana lisas",35​ incorporó "referencias modernas" y utilizó "un joven Bob Dylan", la subcultura Teddy Boy y la pintura del artista francés James Tissot. El círculo de la Rue Royale como inspiración para estilizar el de Chalamet.38​
 
-Saludos
+Filmación y edición
 
-Responder
-Joysdice:
-10/07/2019 a las 13:37
-Si, hay una serie de claves para hacer eso, si mo me equivoco creo que es con pop
+La filmación tuvo lugar principalmente en Harvard, Massachusetts.
+El elenco, con la excepción de Pugh debido a sus compromisos de filmación con la película Midsommar, comenzó los ensayos de la película dos semanas antes de la filmación.29​ La fotografía principal comenzó en Boston en octubre de 2018, 39​ con Harvard, Massachusetts, como ubicación principal.40​ Las ubicaciones adicionales incluyeron Lancaster, la Universidad de Harvard en Cambridge, Crane Beach en Ipswich y Concord, todas en el estado de Massachusetts.41​42​ La casa de la familia March se construyó desde cero en un terreno en Concord,19​ mientras que el Arnold Arboretum de Harvard se utilizó para rodar una escena ambientada en un parque de París del siglo XIX con Pugh, Chalamet y Streep.43​ Castle Hill en Ipswich también se utilizó para duplicar las escenas europeas.44​ El director de fotografía Yorick Le Saux filmó la película en formato de 35 mm.45​
 
-Responder
-Alejandradice:
-29/07/2014 a las 02:57
-https://www.youtube.com/watch?v=UboUIZ7Dn0E&feature=youtu.be
+Gerwig descubrió que estaba embarazada durante la producción y lo mantuvo en privado durante todo el proceso.14​ También impuso la prohibición de los teléfonos móviles en el set durante el rodaje.46​ Después de terminar la fotografía principal el 16 de diciembre de 2018, Gerwig comenzó a editar la película junto con el editor Nick Houy al día siguiente y luego la proyectó para los ejecutivos de Sony Pictures en la ciudad de Nueva York el 10 de marzo de 2019, tres días antes de dar a luz a un hijo.33​
 
-Mira este link para eliminar una llave de un diccionario en python
+Estreno
+El 19 de junio de 2019, Vanity Fair lanzó las primeras imágenes fijas,47​ y el avance oficial se lanzó el 13 de agosto.48​ Mujercitas tuvo su estreno mundial en el Museo de Arte Moderno de la ciudad de Nueva York el 7 de diciembre de 2019,49​ y también se proyectó para inaugurar el Festival Internacional de Cine de Río de Janeiro el 9 de diciembre.50​ Fue estrenada en cines en los Estados Unidos el 25 de diciembre de 2019 por Sony Pictures Releasing.51​52​ Deadline Hollywood informó que Sony gastó aproximadamente $70 millones en la promoción de la película.53​
 
-Responder
-Chermandice:
-12/02/2016 a las 20:45
-Muchas Gracias me salvaste!
+Mujercitas estaba programada originalmente para un estreno en cines en China el 14 de febrero de 2020, pero esto se descartó debido a la pandemia de COVID-19.54​ La película fue lanzada digitalmente el 10 de marzo de 2020 y en DVD y Blu-ray el 7 de abril.55​56​ En mayo, Variety informó que una vez más estaba destinado a ser lanzado en China en una fecha no especificada después de la pandemia.57​ La película se estrenó en Dinamarca y Japón en junio después de que ambos países reabrieran sus salas de cine luego de cierres pandémicos.58​ Finalmente fue lanzada en China el 25 de agosto.59​
 
-Responder
-Javier Monterodice:
-20/02/2016 a las 15:59
-Un placer. Me alegro de que te haya servido.
-Saludos
+Recepción
+Taquilla
+Mujercitas recaudó $108.1 millones en los Estados Unidos y Canadá, y $108.5 millones en otros países, para un total mundial de $216.6 millones, contra un presupuesto de producción de $40 millones.60​61​ En abril de 2020, Deadline Hollywood calculó su beneficio neto en 56 millones de dólares.53​
 
-Responder
-Juan Joaquin Maidana Bernardidice:
-04/02/2017 a las 16:46
-necesito agregar un valor al diccionario, sin que me modifique o reemplace ningún otro de los valores. como podría hacer eso ?. Cabe aclarar que tengo un diccionario con 12 valores y quiero mandar el numero 13. y utilizando una variable de ingreso y asignándolo a otra variable.
+En los Estados Unidos y Canadá, la película se estrenó junto con Spies in Disguise y la expansión de Diamantes en Bruto, y se proyectaba que recaudaría entre 18 y 22 millones de dólares en 3308 salas durante su fin de semana de estreno de cinco días. Ganó $6.4 millones el día de Navidad y $6 millones en su segundo día,62​ y pasó a debutar con $16.8 millones (un total de $29.2 millones durante el período de cinco días de Navidad), terminando en cuarto lugar.63​64​ En su segundo fin de semana, la película recaudó $13.6 millones, terminando tercero.65​ Luego ganó $7.8 millones y $6.4 millones, respectivamente, los siguientes fines de semana.66​67​
 
-Responder
-Javier Monterodice:
-07/02/2017 a las 09:38
-Buenos días, Juan:
-Si no quieres que el valor asociado a una determinada clave de un diccionario se modifique tendrás que comprobar de algún modo que esa clave no exista previamente. Puedes recurrir al operador in. Observa este uso simple para comprobar la existencia o no de una clave particular:
->>> rollings = {'mick':'jagger', 'keith':'richards'}
->>> 'keith' in rollings
-True
+En junio de 2020, la película recaudó 495000 dólares y 255000 dólares durante su primer fin de semana en Japón y su segundo fin de semana en Dinamarca, respectivamente.68​ Ese mismo mes, superó los $100 millones en la taquilla internacional luego de lanzamientos en otros 12 mercados.69​ La película ganó $4.7 millones durante los primeros seis días de su lanzamiento en agosto de 2020 en China.70​
 
-Agrega, entonces un simple if que verifique que tu clave no exista previamente.
-Saludos
-Responder
-Joysdice:
-10/07/2019 a las 13:39
-Creo que es con append y poner en corchete la ubicación, busca las claves para hacer cosas en los diccionarios y te saldrán muchas
+Crítica
 
-Responder
-carlos Navarrodice:
-15/06/2017 a las 17:58
-Buenas, Quisiera poder sumar el numero entero de cada uno de los vendedores dentro de mi Diccionario. Ejemplo:
 
-mi_diccionario = { ‘vendedor1’: 3000, ‘vendedor2’: 5000, ‘vendedor3’: 2000 }
+Saoirse Ronan (arriba) y Florence Pugh fueron nominadas al Premio de la Academia a Mejor Actriz y Mejor Actriz de Reparto, respectivamente.
+En el sitio web del agregador de reseñas Rotten Tomatoes, la película tiene una calificación de aprobación del 95% basada en 403 reseñas, con una calificación promedio de 8.54/10. El consenso de los críticos del sitio web dice: "Con un elenco estelar y un recuento inteligente y sensible de su material original clásico, Mujercitas de Greta Gerwig demuestra que algunas historias son verdaderamente atemporales".71​ En Metacritic, tiene una puntuación media ponderada de 91 sobre de 100, sobre la base de 57 críticas, lo que indica "aclamación universal".72​ Las audiencias encuestadas por CinemaScore le dieron a la película una calificación promedio de "A–" en una escala de A+ a F, y los espectadores encuestados por PostTrak le dieron un promedio de cinco de cinco.63​
 
-Necesito tener alrededor de 20-30 vendedores y cada uno con enteros diferentes, Como hago para sumar solo el numero entero de cada vendedor?
+Escribiendo para IndieWire, Kate Erbland destacó la "ambiciosa narración elíptica" de Gerwig y elogió su dirección por no ser ni "torpe" ni "sermoneadora".73​ Anthony Lane de The New Yorker dijo que "puede que sea la mejor película hecha hasta ahora por una mujer estadounidense".74​ Lindsey Bahr, de Associated Press, también elogió la dirección de Gerwig, considerándola un "logro asombroso" y una "declaración de artista".75​ Al premiar la película con tres y medio de cuatro, Brian Truitt de USA Today elogió la escritura de Gerwig como "magnífica" y dijo que "hace que el tiempo y el lenguaje de Alcott se sientan efervescentemente modernos y auténticamente nostálgicos".76​ Mick LaSalle, que escribe para el San Francisco Chronicle, le dio a la película una crítica mixta, en la que elogió la dirección de Gerwig pero criticó la línea de tiempo no lineal y los personajes "presumidos".77​
 
-En este caso deberia de dar 10000
+Los críticos elogiaron las actuaciones del elenco, con David Rooney de The Hollywood Reporter destacando su "encantador trabajo de conjunto", y Alonso Duralde de TheWrap diciendo que no hubo "un solo momento artificial" de ninguno de los actores.78​79​ Caryn James de BBC Online calificó la actuación de Ronan de "luminosa",80​ y Leah Greenblatt de Entertainment Weekly sugirió que "lleva casi todas las escenas en las que se encuentra".81​ David Sims de The Atlantic destacó la actuación de Pugh, escribiendo que convirtió a su personaje en "una heroína tan rica y convincente como [Ronan]",82​ mientras que Clarisse Loughrey de The Independent declaró que Pugh "se las arregla para robar el show".83​ En su reseña para NPR, Justin Chang elogió las actuaciones de Ronan y Pugh como "increíblemente buenas".84​ Chalamet también fue elogiado por Peter Travers de Rolling Stone y Ann Hornaday de The Washington Post por el "encanto innato y la vulnerabilidad conmovedora", así como la "fisicalidad lúdica" en su actuación.85​86​
 
-Responder
-Hugodice:
-15/09/2017 a las 15:31
-Asi podria ser?
+Si bien la película en general recibió seis nominaciones al Premio de la Academia, Gerwig no fue nominada a Mejor Director, lo que se consideró un desaire.87​88​ Allison Pearson de The Daily Telegraph calificó esto como un "estándar completamente nuevo de idiotez", y opinó que "menosprecia la experiencia de las mujeres",89​ mientras que Dana Stevens de Slate teorizó que los miembros de la Academia creen que "las mujeres solo pueden tener un pequeño reconocimiento, como un regalo "y que Gerwig" ahora puede ser ignorada con seguridad "ya que anteriormente había sido nominada para Lady Bird.90​ Escribiendo para Los Angeles Times, los psicólogos sociales Devon Proudfoot y Aaron Kay concluyeron que el desaire se debió a una "tendencia psicológica general a ver sin saberlo el trabajo de las mujeres como menos creativo que el de los hombres".91​
 
-mi_diccionario = { ‘vendedor1’: 3000, ‘vendedor2’: 5000, ‘vendedor3’: 2000, ‘vendedor4’: 7000 }
+Premios y nominaciones
+En la 92ª edición de los Premios de la Academia, Mujercitas recibió seis nominaciones, incluyendo Mejor Película, Mejor Actriz (Ronan), Mejor Actriz de Reparto (Pugh) y Mejor Guion Adaptado,92​93​ y ganó el Premio al Mejor Diseño de Vestuario.7​94​ La película también recibió nueve nominaciones en los Premios de la Crítica Cinematográfica 2019, ganando como Mejor Guion Adaptado,95​96​ cinco nominaciones en los Premios BAFTA 2019,97​ y dos en los Premios Globo de Oro 2019.98​ Fue elegida por el American Film Institute como una de las diez mejores películas del año.99​
 
-suma = 0
+Referencias
+ «'Little Women' (2019)». Box Office Mojo. Consultado el 18 de marzo de 2020.
+ https://www.ecartelera.com/películas/mujercitas-2019/
+ https://www.elle.com/es/living/ocio-cultura/a19594863/nuevo-mujercitas-reparto/
+ «Entrevista a Greta Gerwig».
+ «La nueva “Mujercitas”: una mirada real sobre el deseo y las ambiciones del universo femenino».
+ ««Pensaba que solo los hombres podían dirigir»: Greta Gerwig, la realizadora de ‘Mujercitas’ explica su pasión por las mujeres que escriben».
+ Carras, Christi (9 de febrero de 2020). «The only Oscar 'Little Women' won was for costume design». Los Angeles Times. Archivado desde el original el 10 de febrero de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Kroll, Justin (18 de octubre de 2013). «Sony Sets Up 'Little Women' Adaptation with Olivia Milch Writing (EXCLUSIVE)». Variety. Archivado desde el original el 12 de enero de 2020. Consultado el 8 de enero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Sneider, Jeff (18 de marzo de 2015). «Amy Pascal, Sarah Polley Team on 'Little Women' Remake at Sony». TheWrap. Archivado desde el original el 5 de octubre de 2018. Consultado el 29 de junio de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ Whipp, Glenn (5 de julio de 2018). «Why it's a perfect time for Greta Gerwig's version of 'Little Women'». Los Angeles Times. Archivado desde el original el 9 de noviembre de 2019. Consultado el 10 de noviembre de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+ Calvario, Liz (6 de agosto de 2016). «'Little Women': Greta Gerwig Will Rewrite Sony's Remake of Louisa May Alcott Novel». IndieWire. Archivado desde el original el 11 de abril de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Kroll, Justin (29 de junio de 2018). «Greta Gerwig Eyes 'Little Women' With Meryl Streep, Emma Watson, Saoirse Ronan, Timothee Chalamet Circling». Variety. Archivado desde el original el 29 de junio de 2018. Consultado el 29 de junio de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ Salisbury, Mark (17 de enero de 2020). «Greta Gerwig on fighting to make 'Little Women': "I was not on anybody's list to direct this film"». Screendaily.com. Screen International. Archivado desde el original el 29 de mayo de 2020. Consultado el 16 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Kaufman, Amy (24 de diciembre de 2019). «'Little Women' director Greta Gerwig didn't just make a 'women's movie'». Los Angeles Times. Archivado desde el original el 24 de diciembre de 2019. Consultado el 31 de julio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Miller, Jenni (25 de diciembre de 2019). «Greta Gerwig's 'Little Women' is the adaptation every Jo March always needed». NBC News. Archivado desde el original el 27 de diciembre de 2019. Consultado el 1 de agosto de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ N'Duka, Amanda (29 de junio de 2018). «Greta Gerwig To Helm 'Little Women' At Sony; Meryl Streep, Emma Stone, Timothée Chalamet, Saoirse Ronan In Talks». Deadline Hollywood. Archivado desde el original el 10 de julio de 2018. Consultado el 29 de junio de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ Canfield, David (17 de octubre de 2019). «Little Women: Timothee Chalamet and Saoirse Ronan talk reunion». Entertainment Weekly. Archivado desde el original el 18 de octubre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Keegan, Rebecca (5 de enero de 2020). «The Season of Florence Pugh». The Hollywood Reporter. Archivado desde el original el 5 de enero de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Sandberg, Bryn Elise (29 de noviembre de 2019). «Making of 'Little Women': Greta Gerwig Gives Modern Take on 1868 Novel for Big Screen». The Hollywood Reporter. Archivado desde el original el 30 de noviembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ N'Duka, Amanda (24 de julio de 2018). «'Little Women': 'Sharp Objects' Actress In Talks For The Role Of Beth March». Deadline Hollywood. Archivado desde el original el 27 de julio de 2018. Consultado el 24 de julio de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ N'Duka, Amanda (2 de agosto de 2018). «Sony's 'Little Women' Adaptation Adds 'Flatliners' Actor James Norton». Deadline Hollywood. Archivado desde el original el 17 de junio de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Galuppo, Mia (14 de agosto de 2018). «Laura Dern in Talks to Join Meryl Streep in 'Little Women'». The Hollywood Reporter. Archivado desde el original el 15 de agosto de 2018. Consultado el 14 de agosto de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ Kroll, Justin (24 de agosto de 2018). «Emma Watson Joins Greta Gerwig's Adaptation of 'Little Women'». Variety. Archivado desde el original el 24 de agosto de 2018. Consultado el 24 de agosto de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ N'Duka, Amanda (5 de septiembre de 2018). «Louis Garrel Cast In 'Little Women' Movie At Sony». Deadline Hollywood. Archivado desde el original el 6 de septiembre de 2018. Consultado el 5 de septiembre de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ N'Duka, Amanda (24 de septiembre de 2018). «'Better Call Saul's Bob Odenkirk Joins Greta Gerwig's 'Little Women' Remake». Deadline Hollywood. Archivado desde el original el 25 de septiembre de 2018. Consultado el 24 de septiembre de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ N'Duka, Amanda (28 de septiembre de 2018). «Oscar Winner Chris Cooper Boards Greta Gerwig's 'Little Women' Adaptation». Deadline Hollywood. Archivado desde el original el 29 de septiembre de 2018. Consultado el 28 de septiembre de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ Fleming Jr, Mike (2 de octubre de 2018). «New Regency Co-Finances Two Sony Films: 'Little Women' & 'Girl In The Spider's Web'». Deadline Hollywood. Archivado desde el original el 3 de octubre de 2018. Consultado el 2 de octubre de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ White, Abbey (23 de diciembre de 2019). «Greta Gerwig on How Her 'Little Women' Adaptation Became "A Movie About Making Movies"». The Hollywood Reporter. Archivado desde el original el 23 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Kaufman, Amy (31 de octubre de 2019). «How Saoirse Ronan and Florence Pugh updated 'Little Women' for modern feminists». Los Angeles Times. Archivado desde el original el 9 de diciembre de 2019. Consultado el 9 de diciembre de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+ Weinberg, Lindsay (2 de noviembre de 2019). «Greta Gerwig Says Meryl Streep Inspired a Powerful Scene in 'Little Women'». The Hollywood Reporter. Archivado desde el original el 4 de noviembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Topel, Fred (30 de diciembre de 2019). «[WATCH] Greta Gerwig And Cast Discuss Focusing On 'Little Women' As Adults». Deadline Hollywood. Archivado desde el original el 15 de junio de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Nicolaou, Elena (27 de diciembre de 2019). «Why Greta Gerwig's Little Women Movie Radically Changed the Book's Ending». O, The Oprah Magazine. Archivado desde el original el 15 de junio de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Whipp, Glenn (16 de diciembre de 2019). «Why Greta Gerwig kept her perfect 'Little Women' ending a secret». Los Angeles Times. Archivado desde el original el 20 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Kinosian, Janet (25 de diciembre de 2019). «Designing 'Women' lets Jacqueline Durran get a little freer with Victorian costumes». Los Angeles Times. Archivado desde el original el 25 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Syme, Rachel (13 de enero de 2020). «How Jacqueline Durran, the "Little Women" Costume Designer, Remixes Styles and Eras». The New Yorker. Archivado desde el original el 13 de enero de 2020. Consultado el 4 de agosto de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Grobar, Matt (2 de enero de 2020). «Costume Designer Jacqueline Durran Talks 'Little Women' Timelines, '1917' Military Attire & Entering Domain Of Superheroes With 'The Batman'». Deadline Hollywood. Archivado desde el original el 2 de enero de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Gonzales, Erica (9 de febrero de 2020). «Jo and Laurie Shared Clothes on Purpose in Little Women». Harper's Bazaar. Archivado desde el original el 29 de febrero de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Ivie, Devon (18 de diciembre de 2019). «Timothée Chalamet Little Women Outfits and Fashion Interview». Vulture. Archivado desde el original el 18 de diciembre de 2019. Consultado el 4 de agosto de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Nechamkin, Sarah (9 de octubre de 2018). «Everything We Know About Greta Gerwig's Little Women Adaptation». The Cut. Archivado desde el original el 14 de agosto de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Schaffstall, Katherine (8 de febrero de 2020). «Oscars: 10 Things to Know About Best Picture Nominee 'Little Women'». The Hollywood Reporter. Archivado desde el original el 15 de junio de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Slane, Kevin (24 de diciembre de 2019). «'Little Women' was filmed entirely in Massachusetts. Here are the historic, picturesque locations from the movie.». Boston.com. Archivado desde el original el 26 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Goldstein, Meredith (21 de diciembre de 2019). «A big stage for Concord in 'Little Women'». The Boston Globe. Archivado desde el original el 22 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Blackwell, Deborah (1 de noviembre de 2018). «Harvard's Arnold Arboretum attracts 'Little Women' with Meryl Streep». The Harvard Gazette. Archivado desde el original el 18 de noviembre de 2018. Consultado el 17 de noviembre de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ Gale, Natalie (19 de diciembre de 2019). «Inside the Filming of Greta Gerwig's Little Women». Northshore Magazine. Archivado desde el original el 17 de junio de 2020. Consultado el 16 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Thompson, Anne (23 de diciembre de 2019). «Little Women: 10 Decisions That Turned It Into a Modern Movie Classic». IndieWire. Archivado desde el original el 23 de diciembre de 2019. Consultado el 4 de agosto de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Ford, Rebecca (3 de enero de 2020). «Why Quentin Tarantino and More Directors Are Banning Cellphones on Set». The Hollywood Reporter. Archivado desde el original el 4 de enero de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Saraiya, Sonia (19 de junio de 2019). «Exclusive First Look: Greta Gerwig and Saoirse Ronan's 'Little Women'». Vanity Fair. Archivado desde el original el 19 de junio de 2019. Consultado el 19 de junio de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+ Beresford, Trilby (13 de agosto de 2019). «Greta Gerwig's 'Little Women' Releases First Trailer». The Hollywood Reporter. Consultado el 13 de agosto de 2019.
+ Bell, Keaton (9 de diciembre de 2019). «All the Photos From Inside the New York Premiere of Little Women». Vogue. Archivado desde el original el 10 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Cajueiro, Marcelo (7 de diciembre de 2019). «Rio Fest's Compact Edition Opens Amidst Sectorial Crisis». Variety. Archivado desde el original el 7 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ McClintock, Pamela (18 de julio de 2018). «Quentin Tarantino's Manson Movie Shifts Off Sharon Tate Murder Anniversary Date». The Hollywood Reporter. Archivado desde el original el 19 de julio de 2018. Consultado el 18 de julio de 2018. Parámetro desconocido |url-status= ignorado (ayuda)
+ Eldredge, Kristy (27 de diciembre de 2019). «Opinion – Men Are Dismissing 'Little Women.' What a Surprise.». The New York Times. Archivado desde el original el 27 de diciembre de 2019. Consultado el 27 de diciembre de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+ D'Alessandro, Anthony (7 de abril de 2019). «'Little Women,' Big Profits: Remake Lands At No. 24 In Deadline's 2019 Most Valuable Blockbuster Tournament». Deadline Hollywood. Archivado desde el original el 7 de abril de 2020. Consultado el 7 de abril de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+ Brzeski, Patrick (3 de febrero de 2020). «China Releases for 'Dolittle,' '1917,' 'Jojo Rabbit' Canceled Amid Coronavirus Crisis». The Hollywood Reporter. Archivado desde el original el 5 de febrero de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Russian, Ale (9 de marzo de 2020). «See Saoirse Ronan, Timothée Chalamet and Emma Watson Get Silly Behind-the-Scenes on Little Women». People. Archivado desde el original el 10 de marzo de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ West, Amy (2 de abril de 2020). «Little Women made a Game of Thrones mistake that was just spotted by fans». Digital Spy. Archivado desde el original el 5 de abril de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Davis, Rebecca (13 de mayo de 2020). «'Little Women,' '1917' Likely Among First Films to Hit Reopened Chinese Theaters». Variety. Archivado desde el original el 14 de mayo de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Roxborough, Scott (15 de junio de 2020). «Little Women: Denmark, Japan Give Cinemas Hope for Post-Virus Recovery». The Hollywood Reporter. Archivado desde el original el 16 de junio de 2020. Consultado el 16 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Grater, Tom (6 de agosto de 2020). «'Little Women' Locks China Release For August 25». Deadline Hollywood. Archivado desde el original el 7 de agosto de 2020. Consultado el 7 de agosto de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ «Little Women (2019)». Box Office Mojo. Amazon. Archivado desde el original el 13 de abril de 2020. Consultado el 31 de agosto de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ «Little Women (2019)». The Numbers. Archivado desde el original el 3 de enero de 2020. Consultado el 31 de agosto de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ McClintock, Pamela (25 de diciembre de 2019). «Box Office: 'Star Wars: Rise of Skywalker' Unwraps Huge $32M on Christmas Day». The Hollywood Reporter. Archivado desde el original el 26 de diciembre de 2019. Consultado el 26 de diciembre de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+ D'Alessandro, Anthony (28 de diciembre de 2019). «'Star Wars: Rise Of Skywalker' Chasing 'Last Jedi' With $76M 2nd Weekend; 'Little Women' Not So Tiny With $29M 5-Day». Deadline Hollywood. Archivado desde el original el 29 de diciembre de 2019. Consultado el 29 de diciembre de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+ «Domestic 2019 Weekend 52». Box Office Mojo. Amazon. Archivado desde el original el 30 de diciembre de 2019. Consultado el 3 de enero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ D'Alessandro, Anthony (5 de enero de 2020). «'Star Wars: Rise Of Skywalker' Dips To $34M+ Third Weekend; 'Grudge' Doesn't Scream With $11M+ & 'F' CinemaScore». Deadline Hollywood. Archivado desde el original el 5 de enero de 2020. Consultado el 5 de enero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ D'Alessandro, Anthony (12 de enero de 2020). «'1917' Strong With $36M+, But 'Like A Boss' & 'Just Mercy' Fighting Over 4th With $10M; Why Kristen Stewart's 'Underwater' Went Kerplunk With $6M+». Deadline Hollywood. Archivado desde el original el 12 de enero de 2020. Consultado el 12 de enero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ D'Alessandro, Anthony (19 de enero de 2020). «'Bad Boys For Life' So Great With $100M+ Worldwide; 'Dolittle' Still A Dud With $57M+ Global – Box Office Update». Deadline Hollywood. Archivado desde el original el 20 de enero de 2020. Consultado el 19 de enero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Tartaglione, Nancy (14 de junio de 2020). «Little Women Marches Towards $100M Overseas – International Box Office». Deadline Hollywood. Archivado desde el original el 14 de junio de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Moreau, Jordan (21 de junio de 2020). «'Little Women' Crosses $100 Million at the International Box Office». Variety. Archivado desde el original el 22 de junio de 2020. Consultado el 22 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Tartaglione, Nancy (30 de agosto de 2020). «'Tenet' Triumphs With $53M Worldwide Launch From 40 Offshore Markets & Canada – International Box Office». Deadline Hollywood. Archivado desde el original el 27 de agosto de 2020. Consultado el 30 de agosto de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ «Little Women (2019)». Rotten Tomatoes. Fandango Media. Archivado desde el original el 18 de diciembre de 2019. Consultado el 19 de agosto de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ «'Little Women' (2019) Reviews». Metacritic. CBS Interactive. Archivado desde el original el 18 de diciembre de 2019. Consultado el 25 de diciembre de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+ Erbland, Kate (25 de noviembre de 2019). «'Little Women' Review: Greta Gerwig Marries Tradition With Meta Modernity in Stunning Adaptation». IndieWire. Archivado desde el original el 29 de febrero de 2020. Consultado el 29 de febrero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Lane, Anthony (6 de enero de 2020). «Greta Gerwig's "Little Women," Reviewed». The New Yorker. Archivado desde el original el 25 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Bahr, Lindsey (16 de diciembre de 2019). «Review: Greta Gerwig's 'Little Women' is a new classic». Associated Press. Archivado desde el original el 15 de junio de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Truitt, Brian (25 de noviembre de 2019). «Review: Greta Gerwig's all-star 'Little Women' adapts a classic with modern wit, resonance». USA Today. Archivado desde el original el 11 de febrero de 2020. Consultado el 29 de febrero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ LaSalle, Mick (19 de diciembre de 2019). «Gerwig's 'Little Women' are snootier than we remember». San Francisco Chronicle. Archivado desde el original el 20 de diciembre de 2019. Consultado el 6 de julio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Rooney, David (25 de noviembre de 2019). «'Little Women': Film Review». The Hollywood Reporter. Archivado desde el original el 26 de noviembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Duralde, Alonso (25 de noviembre de 2019). «'Little Women' Film Review: Greta Gerwig's New Spin on a Beloved Tale». TheWrap. Archivado desde el original el 28 de noviembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ James, Caryn (16 de diciembre de 2019). «Why Little Women is a triumph». BBC Online. Archivado desde el original el 15 de junio de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Greenblatt, Leah (25 de noviembre de 2019). «Little Women review: Greta Gerwig's remake is a warm blanket in a cold world». Entertainment Weekly. Archivado desde el original el 26 de enero de 2020. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Sims, David (25 de diciembre de 2019). «Greta Gerwig Captures the Poignancy of 'Little Women'». The Atlantic. Archivado desde el original el 26 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Loughrey, Clarisse (27 de diciembre de 2019). «Little Women review: Greta Gerwig's loving adaptation waltzes with a literary ghost». The Independent. Archivado desde el original el 25 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Chang, Justin (20 de diciembre de 2019). «'Little Women' Again? Greta Gerwig's Adaptation Is Both Faithful And Radical». NPR. Archivado desde el original el 20 de diciembre de 2019. Consultado el 15 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Travers, Peter (23 de diciembre de 2019). «Greta Gerwig Delivers a 'Little Women' for a New Generation». Rolling Stone. Archivado desde el original el 8 de abril de 2020. Consultado el 14 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Hornaday, Ann (17 de diciembre de 2019). «Part Alcott, part Gerwig, 'Little Women' is a very nearly perfect film». The Washington Post. Archivado desde el original el 18 de diciembre de 2019. Consultado el 14 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Aurthur, Kate (4 de febrero de 2020). «Greta Gerwig on 'Little Women's' Oscar Nominations — and That One Big Snub». Variety. Archivado desde el original el 9 de febrero de 2020. Consultado el 24 de marzo de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Butler, Bethonie (8 de febrero de 2020). «The biggest female director Oscar snubs of the past decade». The Washington Post. Archivado desde el original el 8 de febrero de 2020. Consultado el 24 de marzo de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Pearson, Allison (14 de enero de 2020). «Greta Gerwig's Oscars snub proves Hollywood is still pale, male and stale». The Daily Telegraph. Archivado desde el original el 15 de enero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Stevens, Dana (13 de enero de 2020). «2020 Oscar nominations snub Greta Gerwig for Best Director: Does the Academy think Little Women directed itself?». Slate. Archivado desde el original el 14 de enero de 2020. Consultado el 16 de junio de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Proudfoot, Devon; Kay, Aaron (8 de febrero de 2020). «Op-Ed: A scientific reason for Greta Gerwig's Oscar snub: The creativity of women is judged more harshly». Los Angeles Times. Archivado desde el original el 8 de febrero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Nordyke, Kimberly; Konerman, Jennifer; Strause, Jackie; Howard, Annie (13 de enero de 2020). «Oscar Nominations 2020: The Complete List of Nominees». The Hollywood Reporter. Archivado desde el original el 13 de enero de 2020. Consultado el 15 de enero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Wilson, Jordan (13 de enero de 2020). «Oscars: Greta Gerwig's Adaptation Brings 'Little Women' Noms Tally to 14». The Hollywood Reporter. Archivado desde el original el 13 de enero de 2020. Consultado el 13 de enero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ N'Duka, Amanda (9 de febrero de 2020). «Jacqueline Durran Nabs Second Career Oscar Award For Costume Design For 'Little Women'». Deadline Hollywood. Archivado desde el original el 10 de febrero de 2020. Consultado el 10 de febrero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Malkin, Marc (8 de diciembre de 2019). «Critics' Choice: 'The Irishman,' 'Once Upon a Time in Hollywood' Lead Movie Nominations». Variety. Archivado desde el original el 9 de diciembre de 2019. Consultado el 8 de diciembre de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+ Ramos, Dino-Ray (12 de enero de 2020). «Critics' Choice Awards: 'Once Upon A Time In Hollywood' Wins Best Picture, Netflix And HBO Among Top Honorees – Full Winners List». Deadline Hollywood. Archivado desde el original el 14 de enero de 2020. Consultado el 15 de enero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Tartaglione, Nancy (7 de enero de 2020). «BAFTA Film Awards Nominations: 'Joker', 'The Irishman', 'Once Upon A Time In Hollywood' Lead – Full List». Deadline Hollywood. Archivado desde el original el 8 de enero de 2020. Consultado el 7 de enero de 2020. Parámetro desconocido |url-status= ignorado (ayuda)
+ Nordyke, Kimberly; Konerman, Jennifer; Howard, Annie (9 de diciembre de 2019). «Golden Globes: Full List of Nominations». The Hollywood Reporter. Archivado desde el original el 10 de diciembre de 2019. Consultado el 9 de diciembre de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+ Hipes, Patrick (4 de diciembre de 2019). «AFI Awards Film: 'The Irishman', '1917', 'Little Women' Among Top 10». Deadline Hollywood. Archivado desde el original el 4 de diciembre de 2019. Consultado el 4 de diciembre de 2019. Parámetro desconocido |url-status= ignorado (ayuda)
+Enlaces externos
+Página web oficial
+Mujercitas en Internet Movie Database (en inglés).
+Little Women en Metacritic (en inglés).
+Little Women en Rotten Tomatoes (en inglés).
+Little Women en Box Office Mojo (en inglés)
+Control de autoridades	
+Proyectos WikimediaWd Datos: Q56881140IdentificadoresWorldCatVIAF: 69155707017022410579LCCN: no2019055758
+Categorías: Películas en inglésPelículas de Estados UnidosPelículas de 2019Películas de Columbia PicturesPelículas dramáticasPelículas románticasPelículas de Regency EnterprisesPelículas sobre hermanasPelículas sobre la guerra de SecesiónPelículas dramáticas de Estados UnidosPelículas dramáticas de los años 2010Películas candidatas al premio Óscar a la mejor películaAdaptaciones cinematográficas de Mujercitas
+Menú de navegación
+No has accedido
+Discusión
+Contribuciones
+Crear una cuenta
+Acceder
+ArtículoDiscusión
+LeerEditarVer historialBuscar
+Buscar en Wikipedia
+Portada
+Portal de la comunidad
+Actualidad
+Cambios recientes
+Páginas nuevas
+Página aleatoria
+Ayuda
+Donaciones
+Notificar un error
+Herramientas
+Lo que enlaza aquí
+Cambios en enlazadas
+Subir archivo
+Páginas especiales
+Enlace permanente
+Información de la página
+Citar esta página
+Elemento de Wikidata
+Imprimir/exportar
+Crear un libro
+Descargar como PDF
+Versión para imprimir
 
-for i in mi_diccionario.values():
-suma += i
+En otros idiomas
+العربية
+Deutsch
+English
+Français
+Bahasa Indonesia
+Português
+Русский
+Tiếng Việt
+中文	!"#$%&%()(=()/=)=/)?/=?/=ÑÑ))=Ñ/)99
+21 más
+Editar enlaces
+Esta página se editó por última vez el °22 mar 2021 a las 18:14.
+El texto está disponible bajo la Lic	|encia Creative Commons Atribución Compartir Igual 3.0; pueden aplicarse cláusulas adicionales. Al usar este sitio, usted acepta nuestros términos de uso y nuestra política de privacidad.
+Wikipedia® es una marca registrada de la Fundación Wikimedia, Inc., una organización sin ánimo de lucro.
+	"#import string as st
+import pmli as pm 
+import sys
+import operator as op
 
-print (suma)
+class crearAyudante():
+    def __init__(self):
+        self.MAX = 27
+        self.lista1 = [i for i in st.ascii_lowercase]
+        self.lista1.insert(14,"ñ")
+        
+        self.dicc = [pm.crearPMLI(i) for i in self.lista1]
 
-Responder
-Hugodice:
-15/09/2017 a las 15:25
-Javier, una consulta: es posible agregar mas de un valor a un diccionario? Saludos!
+    def esPalabraValida(self, s):
+        assert(type(s) == str)
+        for letra in s:
+            if not (letra in self.lista1):
+                return False
+        return True
+        
+    def distance(self, s1, s2):
+        d=dict()
+        for i in range(len(s1)+1):
+           d[i]=dict()
+           d[i][0]=i
+        for i in range(len(s2)+1):
+           d[0][i] = i
+        for i in range(1, len(s1)+1):
+            for j in range(1, len(s2)+1):
+                d[i][j] = min(d[i][j-1]+1, d[i-1][j]+1, d[i-1][j-1]+(not s1[i-1] == s2[j-1]))
+        return d[len(s1)][len(s2)]    
 
-Responder
-Hugodice:
-15/09/2017 a las 15:26
-Me referia, mas de un valor a una clave 🙂
+    def cargarDiccionario(self, fname):
+        with open(fname) as archivo:
+            for linea in archivo:
+                linea = linea[:-1].lower()
+                # print(linea)
+                if self.esPalabraValida(linea) is True:
+                    for i in range(self.MAX):
+                        if self.dicc[i].l == linea[0] and  not linea.isspace():
+                            #print(i, self.dicc[i].l, len(self.dicc))
+                            #resolver las lineas en blamco
+                            self.dicc[i].agregarPalabra(linea)
+                            break              
+                else:
+                    return
 
-Responder
-Lucas Corsodice:
-19/09/2019 a las 22:06
-Muchas gracias, fácil de entender.
+    def borrarPalabra(self, p):
+        assert(self.esPalabraValida(p) is True)
+        for i in range(self.MAX):
+            if self.dicc[i].l == p[0] and self.dicc[i].eliminarPalabra(p) is True:
+                return           
 
-Responder
-Deja un comentario
+    def buscarPalabra(self, p):
+        assert(self.esPalabraValida(p) is True)
+        for i in range(self.MAX):
+            if self.dicc[i].l == p[0] and self.dicc[i].buscarPalabra(p) is True:
+                return True
 
-Navegación de entradas
-ANTERIOR
-Entrada anterior:Construcción de acordes – 18: Séptima con novena aumentada
-SIGUIENTE
-Entrada siguiente:LaTeX: La integral definida
-LA SUERTE ESTÁ ECHADA
+    def mostrar(self):
+        for i in range(self.MAX):
+            print(self.dicc[i].mostrar(), "\n")
 
-ECDA EN FACEBOOK
+    def corregirTexto(self, finput):
+        with open(finput) as archivo:
+            for linea in archivo:
+                lista = [i for i in linea.split()
+                         if (self.esPalabraValida(i) is True) and (self.buscarPalabra(i) is not True)]
+                
+                for palabra in lista:
+                    # print(palabra)
+                    dlev = {}
+                    for i in range(self.MAX):
+                        aux = self.dicc[i].pal.tabla
+                        dlev1 = {}
+                        for j in range(len(aux)):
+                            dlev1 = {}
+                            if aux[j] is not None:
+                                if len(dlev) < 4:
+                                    dlev[aux[j]] = self.distance(aux[j], palabra)
 
-PARA QUE NO TE PIERDAS…
-Índice global por fechas
-Indice – Armonía
-Armonía – Índice de lectura recomendado
-Indice – Guitarra
-Indice – MuseScore
-Indice – Python
-Indice – Java
-Índice – LaTeX
-Indice – Productividad
-ENTRADAS RECIENTES
-Armonización de la escala menor armónica en las 12 tonalidades
-Los modos de la escala menor armónica – 2
-Python – Buscando a Wally.txt
-Los modos de la escala menor armónica – 1
-Python – Troceando desde el lado izquierdo
-Acordes en disposición Drop 3
-LaTeX – Control de la numeración de las listas
-Acordes en disposición Drop 2
-Java – Un paseo por Eclipse
-La escala mayor en las 12 tonalidades – Cuadro
-CATEGORÍAS
-Categorías
-Elegir la categoría
-BUSCAR EN ECDA
-Buscar por:
-Buscar …
-BUSCAR
-ÚLTIMOS COMENTARIOS
-Diego de los Santos en Los modos de la escala menor melódica – 1
-gustavo en Construcción de acordes – 6: Sexta y menor sexta
-ArleyB en Python: Los operadores lógicos y sus tablas de verdad
-Felipe Manzano en Python – Capítulo 13: Recorriendo una lista con la sentencia FOR
-Roberto en Python: Vida y muerte de una variable
-SUSCRÍBETE A ECDA
-Introduce tu correo electrónico si deseas recibir notificaciones cada vez que se publique un nuevo artículo
+                                else:    
+                                    # print(dlev, palabra, dlev1,"\n")
+                                    pal_dicc = (aux[j], self.distance(aux[j], palabra))
 
-Dirección de correo electrónico
-Dirección de correo electrónico
+                                    dlev = dict(sorted([i for i in dlev.items()], key=lambda x: x[1]))
+                                    for i in dlev.items():
 
-SUSCRIBIR
+                                        if i[1] <= pal_dicc[1] and len(dlev1) < 4:
+                                            dlev1[i[0]] = i[1]  
 
-SÍGUEME EN TWITTER
+                                        elif i[1] > pal_dicc[1] and len(dlev1) < 4:       
+                                            dlev1[pal_dicc[0]] = pal_dicc[1]    
+                                            pal_dicc = i
 
-ALGUIEN DIJO...
-Con los libros ocurre lo mismo que con las personas: hay que tomarlos en serio.
+                                    dlev = dlev1
+                    
+                    with open("foutput.txt", "a") as archivo:
+                        salida = dlev
+                        salida = [clave for clave in salida.keys()]
+                        salida.insert(0, palabra)
+                        salida = ",".join(salida)
+                        archivo.write(salida)
+                        archivo.write("\n")
 
-— Cesare Pavese
-Próxima cita »
-Música
-expande el menú inferior
-Programación
-expande el menú inferior
-Otros
-expande el menú inferior
-El Club del Autodidacta Funciona gracias a WordPress
+
+
+                                
+                        
+                        
+
+                
+                # for i in d.items():
+                # print("*", lista,"\n")
+
+
+helpo = crearAyudante()
+helpo.cargarDiccionario(sys.argv[1])
+
+# print(helpo.mostrar())
+
+# elpo.borrarPalabra(sys.argv[2])
+# helpo.buscarPalabra(sys.argv[3])
+helpo.corregirTexto(sys.argv[4])
+helpo.mostrar()
+
+
+
+
+# with open(sys.argv[4]) as archivo:
+#    for linea in archivo:
+#        lista = linea.split()
+#        print(lista)
+

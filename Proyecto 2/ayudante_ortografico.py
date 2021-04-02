@@ -58,52 +58,73 @@ class crearAyudante():
                 return True
 
     def mostrar(self):
-        for i in range(27):
-            print(self.dicc[i].pal.tabla, "\n")
+        for i in range(self.MAX):
+            self.dicc[i].mostrar() 
+            print("\n")
 
     def corregirTexto(self, finput):
+        lista_let = []
         with open(finput) as archivo:
-            for linea in archivo:
-                lista = [i for i in linea.split()
-                         if (self.esPalabraValida(i) is True) and (self.buscarPalabra(i) is not True)]
-                
-                for palabra in lista:
-                    print(palabra)
-                    dlev = {}
-                    for i in range(self.MAX):
-                        aux = self.dicc[i].pal.tabla
+            lista_archi = "".join(archivo.readlines()).split()
+            # print(lista_archi)
+            for casilla in lista_archi:
+                if self.esPalabraValida(casilla) is True:
+                    lista_let.append(casilla)
+                else:
+                    aux = ""
+                    #rint(casilla)
+                    for l in  casilla:
+                        if (l in st.punctuation) or (l in st.digits) or (l in st.whitespace):
+                            if len(aux) > 0:
+                                lista_let.append(aux)
+                            aux = ""
+                            
+                        elif (l not in st.punctuation) and (l not in st.digits) and (l not in st.whitespace):
+                            aux += l
+                    if len(aux) > 0:
+                        lista_let.append(aux)
+            #print("\n \n \n######################################################")
+            # print(lista_let)
+
+            
+            # lista = [i for i in lista_let
+            #         if (self.esPalabraValida(i) is True) and (self.buscarPalabra(i) is not True)]
+            # lista = [i for i in lista if lista.count(i) == 1]
+
+            lista = []
+            for j in lista_let:
+                if j not in lista and (self.esPalabraValida(j) is True) and (self.buscarPalabra(j) is not True):
+                    lista.append(j)
+
+            for palabra in lista:
+                dlev = {}
+                for i in range(self.MAX):
+                    aux = self.dicc[i].pal.tabla
+                    dlev1 = {}
+                    for j in range(len(aux)):
                         dlev1 = {}
-                        for j in range(len(aux)):
-                            dlev1 = {}
-                            if aux[j] is not None:
-                                if len(dlev) < 4:
-                                    dlev[aux[j]] = self.distance(aux[j], palabra)
+                        if aux[j] is not None:
+                            if len(dlev) < 4:
+                                dlev[aux[j]] = self.distance(aux[j], palabra)
+                            else:    
+                                pal_dicc = (aux[j], self.distance(aux[j], palabra))
+                                dlev = dict(sorted([i for i in dlev.items()], key=lambda x: x[1]))
+                                for i in dlev.items():
+                                    if i[1] <= pal_dicc[1] and len(dlev1) < 4:
+                                        dlev1[i[0]] = i[1]  
+                                    elif i[1] > pal_dicc[1] and len(dlev1) < 4:       
+                                        dlev1[pal_dicc[0]] = pal_dicc[1]    
+                                        pal_dicc = i
 
-                                else:    
-                                    # print(dlev, palabra, dlev1,"\n")
-                                    pal_dicc = (aux[j], self.distance(aux[j], palabra))
+                                dlev = dlev1
 
-                                    dlev = dict(sorted([i for i in dlev.items()], key=lambda x: x[1]))
-                                    for i in dlev.items():
-
-                                        if i[1] <= pal_dicc[1] and len(dlev1) < 4:
-                                            dlev1[i[0]] = i[1]  
-
-                                        elif i[1] > pal_dicc[1] and len(dlev1) < 4:       
-                                            dlev1[pal_dicc[0]] = pal_dicc[1]    
-                                            pal_dicc = i
-
-                                    dlev = dlev1
-                    
-                    with open("foutput.txt", "a") as archivo:
-                        salida = dlev
-                        salida = [clave for clave in salida.keys()]
-                        salida.insert(0, palabra)
-                        salida = ",".join(salida)
-                        archivo.write(salida)
-                        archivo.write("\n")
-
-
+                with open("foutput.txt", "a") as archivo:
+                    salida = dlev
+                    salida = [clave for clave in salida.keys()]
+                    salida.insert(0, palabra)
+                    salida = ",".join(salida)
+                    archivo.write(salida)
+                    archivo.write("\n")
 
                                 
                         
@@ -122,7 +143,7 @@ helpo.cargarDiccionario(sys.argv[1])
 # elpo.borrarPalabra(sys.argv[2])
 # helpo.buscarPalabra(sys.argv[3])
 helpo.corregirTexto(sys.argv[4])
-
+# helpo.mostrar()
 
 
 
