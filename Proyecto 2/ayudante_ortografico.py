@@ -9,7 +9,6 @@ class crearAyudante():
         self.MAX = 27
         self.lista1 = [i for i in st.ascii_lowercase]
         self.lista1.insert(14,"ñ")
-        
         self.dicc = [pm.crearPMLI(i) for i in self.lista1]
 
     def esPalabraValida(self, s):
@@ -34,7 +33,7 @@ class crearAyudante():
     def cargarDiccionario(self, fname):
         with open(fname) as archivo:
             for linea in archivo:
-                linea = linea[:-1]
+                linea = linea[:-1].lower()
                 # print(linea)
                 if self.esPalabraValida(linea) is True:
                     for i in range(self.MAX):
@@ -50,7 +49,7 @@ class crearAyudante():
         assert(self.esPalabraValida(p) is True)
         for i in range(self.MAX):
             if self.dicc[i].l == p[0] and self.dicc[i].eliminarPalabra(p) is True:
-                return           
+                return True      
 
     def buscarPalabra(self, p):
         assert(self.esPalabraValida(p) is True)
@@ -66,26 +65,26 @@ class crearAyudante():
 
 
     def corregirTexto(self, finput):
-        lista_let = []
+        # lista_let = []
         with open(finput) as archivo:
             lista_archi = "".join(archivo.readlines()).split()
 
-            for casilla in lista_archi:
-                if self.esPalabraValida(casilla) is True:
-                    lista_let.append(casilla)
-                else:
-                    aux = ""
+        #    for casilla in lista_archi:
+        #        if self.esPalabraValida(casilla) is True:
+        #            lista_let.append(casilla)
+        #        else:
+        #            aux = ""
 
-                    for l in  casilla:
-                        if (l in st.punctuation) or (l in st.digits) or (l in st.whitespace):
-                            if len(aux) > 0:
-                                lista_let.append(aux)
-                            aux = ""
-                            
-                        elif (l not in st.punctuation) and (l not in st.digits) and (l not in st.whitespace):
-                            aux += l
-                    if len(aux) > 0:
-                        lista_let.append(aux)
+        #            for l in  casilla:
+        #                if (l in st.punctuation) or (l in st.digits) or (l in st.whitespace):
+        #                    if len(aux) > 0:
+        #                        lista_let.append(aux)
+        #                    aux = ""
+        #                    
+        #                elif (l not in st.punctuation) and (l not in st.digits) and (l not in st.whitespace):
+        #                    aux += l
+        #            if len(aux) > 0:
+        #                lista_let.append(aux)
             #print("\n \n \n######################################################")
             # print(lista_let)
 
@@ -94,64 +93,61 @@ class crearAyudante():
             #         if (self.esPalabraValida(i) is True) and (self.buscarPalabra(i) is not True)]
             # lista = [i for i in lista if lista.count(i) == 1]
 
+            # print(lista_archi)
             lista = []
-            for j in lista_let:
+            for j in lista_archi:
                 if j not in lista and (self.esPalabraValida(j) is True) and (self.buscarPalabra(j) is not True):
                     lista.append(j)
 
-            for palabra in lista:
-                dlev = {}
-                for i in range(self.MAX):
-                    aux = self.dicc[i].pal.tabla
-                    dlev1 = {}
-                    for j in range(len(aux)):
+            with open("foutput.out", "w") as archivo:
+                print("Corrigiendo...")
+                for palabra in lista:
+                    dlev = {}
+                    for i in range(self.MAX):
+                        aux = self.dicc[i].pal.tabla
                         dlev1 = {}
-                        if aux[j] is not None:
-                            if len(dlev) < 4:
-                                dlev[aux[j]] = self.distance(aux[j], palabra)
-                            else:    
-                                pal_dicc = (aux[j], self.distance(aux[j], palabra))
-                                dlev = dict(sorted([i for i in dlev.items()], key=lambda x: x[1]))
-                                for i in dlev.items():
-                                    if i[1] <= pal_dicc[1] and len(dlev1) < 4:
-                                        dlev1[i[0]] = i[1]  
-                                    elif i[1] > pal_dicc[1] and len(dlev1) < 4:       
-                                        dlev1[pal_dicc[0]] = pal_dicc[1]    
-                                        pal_dicc = i
+                        for j in range(len(aux)):
+                            dlev1 = {}
+                            if aux[j] is not None:
+                                if len(dlev) < 4:
+                                    dlev[aux[j]] = self.distance(aux[j], palabra)
+                                else:    
+                                    pal_dicc = (aux[j], self.distance(aux[j], palabra))
+                                    dlev = dict(sorted([i for i in dlev.items()], key=lambda x: x[1]))
+                                    for i in dlev.items():
+                                        if i[1] <= pal_dicc[1] and len(dlev1) < 4:
+                                            dlev1[i[0]] = i[1]  
+                                        elif i[1] > pal_dicc[1] and len(dlev1) < 4:       
+                                            dlev1[pal_dicc[0]] = pal_dicc[1]    
+                                            pal_dicc = i
 
-                                dlev = dlev1
+                                    dlev = dlev1
 
-                with open("foutput.txt", "a") as archivo:
                     salida = dlev
                     salida = [clave for clave in salida.keys()]
                     salida.insert(0, palabra)
                     salida = ",".join(salida)
                     archivo.write(salida)
                     archivo.write("\n")
-
-                                
-                        
-                        
-
-                
-                # for i in d.items():
-                # print("*", lista,"\n")
+        print("Texto corregido")
+        return "foutput.out"
 
 
-helpo = crearAyudante()
-helpo.cargarDiccionario(sys.argv[1])
+if __name__ == '__main__':
+    helpo = crearAyudante()
+    helpo.cargarDiccionario(sys.argv[1])
 
-helpo.mostrar()
+    helpo.mostrar()
 
-# elpo.borrarPalabra(sys.argv[2])
-# helpo.buscarPalabra(sys.argv[3])
-helpo.corregirTexto(sys.argv[4])
-# helpo.mostrar()
+    # elpo.borrarPalabra(sys.argv[2])
+    # helpo.buscarPalabra(sys.argv[3])
+    helpo.corregirTexto(sys.argv[4])
+    # helpo.mostrar()
 
 
 
 
-# with open(sys.argv[4]) as archivo:
-#    for linea in archivo:
-#        lista = linea.split()
-#        print(lista)
+    # with open(sys.argv[4]) as archivo:
+    #    for linea in archivo:
+    #        lista = linea.split()
+    #        print(lista)

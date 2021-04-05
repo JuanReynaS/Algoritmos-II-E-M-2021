@@ -78,7 +78,7 @@ class OpenHtable(object):
         while i < self.n:
             casilla = self.h(k, i)
             if self.tabla[casilla] == k:
-                print("Clave eliminada: {}, en casilla: {}".format(self.tabla[casilla], casilla))
+                # print("Clave eliminada: {}, en casilla: {}".format(self.tabla[casilla], casilla))
                 self.tabla[casilla] = None
                 return True
             else:
