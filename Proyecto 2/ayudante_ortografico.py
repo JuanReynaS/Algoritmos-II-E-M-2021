@@ -55,7 +55,7 @@ class crearAyudante():
                             break
             return True
         except IOError:
-            print("Usted no está intentando cargar un archivo")        
+            print("Usted no está intentando cargar un archivo.")        
 
 
     def borrarPalabra(self, p):
@@ -110,7 +110,7 @@ class crearAyudante():
                         c += 1
                     elif (d * contador) == e and len(lista_archi) > 40:
                         print(Cursor.UP(1)  +  "Buscando sugerencias del diccionario: ")
-                        print(Cursor.FORWARD(60) + Cursor.UP(1)  +  " {}% ".format((e  * 100) // len(lista) ))
+                        print(Cursor.FORWARD(60) + Cursor.UP(1)  +  " {}% ".format((e  * 100) // len(lista_archi) ))
                         print(Cursor.FORWARD(c) + Cursor.UP(1) + "°")
                         c += 1
                         d += 1
