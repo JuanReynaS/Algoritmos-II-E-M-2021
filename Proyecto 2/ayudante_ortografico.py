@@ -1,209 +1,264 @@
-import string as st
-import pmli as pm 
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import os
 import sys
-import operator as op
-from colorama import Cursor, init, Fore, Style, Back
-from progress.counter import Countdown
-import time as tm
+import time
+import ayudante_ortografico as ao
+from colorama import init, Fore, Style, Back
+init()
 
-class crearAyudante():
-    def __init__(self):
-        self.MAX = 27
-        self.lista1 = [i for i in st.ascii_lowercase]
-        self.lista1.insert(14,"ñ")
-        self.dicc = [pm.crearPMLI(i) for i in self.lista1]
 
-    def esPalabraValida(self, s):
-        try:
-            assert(type(s) == str)
-            for letra in s:
-                if not (letra in self.lista1):
-                    return False
-            return True
-        except AssertionError:
-            print("Usted ingreso valor que no es string")  
-        
-    def edit_distance(self, s1, s2):
-        try:
-            assert(type(s1) == str and type(s2) == str)
-            m = dict()
-            for i in range(len(s1)+1):
-               m[i] = dict()
-               m[i][0] = i
-            for i in range(len(s2)+1):
-               m[0][i] = i
-            for i in range(1, len(s1)+1):
-                for j in range(1, len(s2)+1):
-                    m[i][j] = min(m[i][j-1]+1, m[i-1][j]+1, m[i-1][j-1]+(not s1[i-1] == s2[j-1]))
-            return m[len(s1)][len(s2)]
-        except AssertionError:
-            print("Usted ingreso valores que no son strings")  
+def clear():
+    if os.name == "posix":
+        os.system("clear")
+    elif os.name == "ce" or os.name == "nt" or os.name == "dos":
+        os.system("cls")
 
-    def cargarDiccionario(self, fname):
-        try:
-            with open(fname) as archivo:
-                for linea in archivo:
-                    linea = linea[:-1]
-                    if self.esPalabraValida(linea) is False:
-                        return  False                      
-            with open(fname) as archivo:
-                for linea in archivo:
-                    linea = linea[:-1]
-                    for i in range(self.MAX):
-                        if self.dicc[i].l == linea[0] and  not linea.isspace() and self.buscarPalabra(linea) is None:
-                            self.dicc[i].agregarPalabra(linea)
+
+def err_ao():
+    print(Fore.RED + Back.WHITE + Style.BRIGHT 
+          + "Todavía no ha sido creado un ayudante ortográfico"
+          + Fore.RESET + Back.RESET)
+    time.sleep(2)
+    clear()
+
+
+def archivo_selecc():
+    c = 0
+    with os.scandir() as ficheros:
+        ficheros = sorted([fichero.name for fichero in ficheros
+                           if fichero.is_file()])
+
+    print("\n\nEn su directorio actual se encuentran los siguientes archivos:\n")
+    for i in ficheros:
+        print("{}: {}".format(c, i))
+        c += 1
+    return ficheros
+
+
+help_o = None
+guar_dicc = []
+crear = False
+crear_dicc = False
+while True:
+    try:
+        print("1. Crear ayudante ortográfico")
+        print("2. Cargar diccionario ")
+        print("3. Eliminar palabra ")
+        print("4. Corregir texto")
+        print("5. Mostrar diccionario")
+        print("6. Salir de aplicación")
+        N = int(input("Elija una opción "))
+        if N == 1:
+            if crear is False:
+                help_o = ao.crearAyudante()
+                print(Fore.GREEN + Back.WHITE + Style.BRIGHT
+                      + "Se ha creado un ayudante ortográfico"
+                      + Fore.RESET + Back.RESET)
+                crear = True
+                time.sleep(1.2)
+                clear()
+            else:
+                print(Fore.RED + Back.WHITE + Style.BRIGHT
+                      + "Ya existe un ayudante ortográfico"
+                      + Fore.RESET + Back.RESET)
+                time.sleep(1.8)
+                clear()
+
+        elif N == 2:
+            if help_o is None:
+                err_ao()
+            else:
+                clear()
+                while True:
+                    try:
+                        lista_archivo = archivo_selecc()
+                        print("00: Regresar a menu principal")
+                        print("-1: Actualizar archivos de su directorio")
+                        diccionario = int(input("Elija el diccionario que desea cargar "))
+
+                        if diccionario == 00:
+                            clear()
                             break
-            return True
-        except IOError:
-            print("Usted no está intentando cargar un archivo.")        
+                        elif diccionario == -1:
+                            clear()
+                            pass
+                        if diccionario < -1 or diccionario > len(lista_archivo):
+                            print(Fore.RED + Back.WHITE + Style.BRIGHT
+                                  + "Opción no válida" + Fore.RESET + Back.RESET)
+                            time.sleep(1.2)
+                            clear()
+                        elif ((lista_archivo[diccionario]  not in guar_dicc
+                               and 0 <= diccionario < len(lista_archivo))):
+                            cargar_dicc = help_o.cargarDiccionario(lista_archivo[diccionario])
+                            if cargar_dicc is True:
+                                guar_dicc.append(lista_archivo[diccionario])
+                                crear_dicc = True
 
+                                print(Fore.GREEN + Back.WHITE + Style.BRIGHT
+                                      + "Se ha cargado un diccionario" + Fore.RESET
+                                      + Back.RESET)
 
-    def borrarPalabra(self, p):
-        try:
-            assert(self.esPalabraValida(p) is True)
-            for i in range(self.MAX):
-                if self.dicc[i].l == p[0] and self.dicc[i].eliminarPalabra(p) is True:
-                    return True      
-            return None
-        except AssertionError:
-            return False
-    
-    def buscarPalabra(self, p):
-        try:
-            assert(self.esPalabraValida(p) is True)
-            for i in range(self.MAX):
-                if self.dicc[i].l == p[0] and self.dicc[i].buscarPalabra(p) is True:
-                    return True
-            return None
+                                od = int(input("¿Desea cargar otro diccionario? 1. Si 2. No "))
+                                if od == 1:
+                                    clear()
+                                elif od == 2:
+                                    clear()
+                                    break
+                            elif cargar_dicc is False:
 
-        except AssertionError:
-            print(Fore.RED + Back.WHITE + Style.BRIGHT + "Palabra no es válida" + Fore.RESET + Back.RESET)
-    
+                                print(Fore.RED + Back.WHITE + Style.BRIGHT
+                                      + "Archivo seleccionado no es válido como diccionario"
+                                      + Fore.RESET + Back.RESET)
 
-    def mostrar(self):
-        
-        for i in range(self.MAX):
-            self.dicc[i].mostrar()
-            print(Cursor.DOWN(10) + "\n")
+                                time.sleep(1.8)
+                                clear()
+                        else:
 
+                            print(Fore.RED + Back.WHITE + Style.BRIGHT
+                                  + "El diccionario elegido ya está cargado"
+                                  + Fore.RESET + Back.RESET)
 
-    def corregirTexto(self, finput):
-        try:
-            c = 40
-            d = 1
-            e = 0
-            print("\n")
-            with open(finput) as archivo:
-                inicio = tm.time()
-                lista_archi = "".join(archivo.readlines()).split()
-                lista = []
-                contador = len(lista_archi) // 20
-                for j in lista_archi:
-                    if j not in lista and (self.esPalabraValida(j) is True) and (self.buscarPalabra(j) is not True):
-                        lista.append(j)
+                            mostrar_dicc = int(input("Desea ver los diccionarios cargados 1. Si 2. No "))
+                            if mostrar_dicc == 1:
+                                print(guar_dicc)
+                                enter = input("Presione Enter para continuar...")
+                                clear()
+                            elif mostrar_dicc == 2:
+                                pass
+                            else:
+                                print(Fore.RED + Back.WHITE + Style.BRIGHT
+                                      + "Opción no válida" + Fore.RESET + Back.RESET)
 
-                    if  (d * contador) == e:
-                        print(Cursor.UP(1) + Fore.GREEN + "Extrayendo palabras válidas del texto: ")
-                        print(Cursor.FORWARD(60) + Cursor.UP(1) + " {}%".format((e * 100) // len(lista_archi)))
-                        print(Cursor.FORWARD(c) + Cursor.UP(1) + "°")
-                        d += 1
-                        c += 1
-                    elif (d * contador) == e and len(lista_archi) > 40:
-                        print(Cursor.UP(1)  +  "Buscando sugerencias del diccionario: ")
-                        print(Cursor.FORWARD(60) + Cursor.UP(1)  +  " {}% ".format((e  * 100) // len(lista_archi) ))
-                        print(Cursor.FORWARD(c) + Cursor.UP(1) + "°")
-                        c += 1
-                        d += 1
+                                clear()
 
-                    e += 1
+                    except ValueError:
 
-                print(Cursor.FORWARD(60) + Cursor.UP(1) + " 100%" )
-                final = tm.time()
+                        print(Fore.RED + Back.WHITE + Style.BRIGHT
+                              + "Opción no válida" + Fore.RESET + Back.RESET)
 
-                tiempo1 = final - inicio
-                
+                        time.sleep(1.2)
+                        clear()
+        elif N == 3:
+            if help_o is None:
+                err_ao()
+            else:
+                if crear_dicc is True:
+                    palabra = input("Ingrese la palabra que desea eliminar ")
+                    borrar = help_o.borrarPalabra(palabra)
+                    if borrar is True:
 
-            c = 40
-            e = 0
-            d = 1
+                        print(Fore.GREEN + Back.WHITE + Style.BRIGHT
+                              + "Palabra eliminada: {}".format(palabra)
+                              + Fore.RESET + Back.RESET)
+
+                        time.sleep(1.8)
+                        clear()
+                    elif borrar is None:
+
+                        print(Fore.RED + Back.WHITE + Style.BRIGHT 
+                              + "Palabra no está en diccionario"
+                              + Fore.RESET + Back.RESET)
+
+                        time.sleep(1.8)
+                        clear()
+                    elif borrar is False:
+
+                        print(Fore.RED + Back.WHITE + Style.BRIGHT
+                              + "Palabra no es válida"
+                              + Fore.RESET + Back.RESET)
+
+                        time.sleep(1.8)
+                        clear()
+
+                else:
+
+                    print(Fore.RED + Back.WHITE + Style.BRIGHT 
+                          + "Aún no ha cargado un diccionario"
+                          + Fore.RESET + Back.RESET)
+
+                    time.sleep(1.8)
+                    clear()
+
+        elif N == 4:
+
+            if help_o is None:
+                err_ao()
+            else:
+                clear()
+                if crear_dicc is False:
+                    print(Fore.RED + Back.WHITE + Style.BRIGHT
+                          + "No se ha cargado diccionario"
+                          + Fore.RESET + Back.RESET)
+                    time.sleep(1.8)
+                    clear()
+                else:
+                    while True:
+                        try:
+                            lista_archivo = archivo_selecc()
+                            print("00: Regresar a menu principal")
+                            texto = int(input("Elija el texto que desea corregir "))
+                            if texto == 00:
+                                clear()
+                                break
+                            if lista_archivo[texto] in guar_dicc:
+
+                                print(Fore.RED + Back.WHITE + Style.BRIGHT
+                                      + "No puede corregir archivo cargado como diccionario"
+                                      + Fore.RESET + Back.RESET)
+                                
+                                time.sleep(1.8)
+                                clear()
+                            else:
+                                salida = help_o.corregirTexto(lista_archivo[texto])
+
+                                print(Fore.GREEN + Back.WHITE + Style.BRIGHT
+                                      + "\nSe generó el archivo: {}".format(salida)
+                                      + Fore.RESET + Back.RESET)
+
+                                time.sleep(3)
+                                clear()
+                        
+                        except ValueError:
+
+                            print(Fore.RED + Back.WHITE + Style.BRIGHT
+                                  + "Opción no válida" + Fore.RESET + Back.RESET)
+
+                            time.sleep(1.2)
+                            clear()
+        elif N == 5:
+            if help_o is None:
+                err_ao()
+            else:
+                if crear_dicc is False:
+
+                    print(Fore.RED + Back.WHITE + Style.BRIGHT
+                          + "No se ha cargado diccionario"
+                          + Fore.RESET + Back.RESET)
+
+                    time.sleep(1.8)
+                    clear()
+                else:
+                    help_o.mostrar()
+                    continuar = input("Presione enter para continuar...")
+                    clear()
+
+        elif N == 6:
+            sys.exit()
+        else:
+
+            print(Fore.RED + Back.WHITE + Style.BRIGHT
+                  + "Opción debe estar entre 1 y 6"
+                  + Fore.RESET + Back.RESET)
             
-            contador = len(lista) // 20
-            print("\n")
-            with open("foutput.out", "w") as archivo:
-                inicio = tm.time()
-                for palabra in lista:
-                    dlev = {}
-                    for i in range(self.MAX):
-                        aux = self.dicc[i].pal.tabla
-                        dlev1 = {}
-                        for j in range(len(aux)):
-                            dlev1 = {}
-                            if aux[j] is not None:
-                                if len(dlev) < 4:
-                                    dlev[aux[j]] = self.edit_distance(aux[j], palabra)
-                                else:    
-                                    pal_dicc = (aux[j], self.edit_distance(aux[j], palabra)) #tupla diccionario, palabra
-                                    dlev = dict(sorted([i for i in dlev.items()], key=lambda x: x[1]))
-                                    for i in dlev.items():
-                                        if i[1] <= pal_dicc[1] and len(dlev1) < 4:
-                                            dlev1[i[0]] = i[1]  
-                                        elif i[1] > pal_dicc[1] and len(dlev1) < 4:       
-                                            dlev1[pal_dicc[0]] = pal_dicc[1]    
-                                            pal_dicc = i
+            time.sleep(1.2)
+            clear()
 
-                                    dlev = dlev1
+    except ValueError:
 
-                    salida = dlev
-                    salida = [clave for clave in salida.keys()]
-                    salida.insert(0, palabra)
-                    salida = ",".join(salida)
-                    archivo.write(salida)
-                    archivo.write("\n")
-                      
-                    longitud = len(lista)
-                    if  longitud <= 40:
-                        print(Cursor.UP(1)  +  "Sugiriendo palabras del diccionario: ")
-                        print(Cursor.FORWARD(60) + Cursor.UP(1)  +  " 100% ")
-                        print(Cursor.FORWARD(c) + Cursor.UP(1) + "°°°°°°°°°°°°°°°°°°°°")
-                        longitud = 41
+        print(Fore.RED + Back.WHITE + Style.BRIGHT
+              + "Opción no válida" + Fore.RESET + Back.RESET)
 
-                    elif (d * contador) == e and len(lista) > 40:
-                        print(Cursor.UP(1)  +  "Buscando sugerencias del diccionario: ")
-                        print(Cursor.FORWARD(60) + Cursor.UP(1)  +  " {}% ".format((e  * 100) // len(lista) ))
-                        print(Cursor.FORWARD(c) + Cursor.UP(1) + "°")
-                        c += 1
-                        d += 1
-
-                    e += 1
-
-                final = tm.time()
-
-                tiempo2 = final - inicio
-            
-            
-            print(Cursor.FORWARD(60) + Cursor.UP(1) + " 100%\n" + Fore.RESET)
-            print("Texto corregido\n")
-            print("Tiempo de corrección del texto es {}s".format(round(tiempo1 + tiempo2, 3)))
-            return "foutput.out"
-        except IOError:
-            print(Fore.RED + Back.WHITE + Style.BRIGHT + "Usted está intentando cargar un elemento no válido como archivo" + Fore.RESET + Back.RESET)  
-
-if __name__ == '__main__':
-    
-    helpo = crearAyudante()
-    helpo.edit_distance("ergo", "papa")
-    helpo.cargarDiccionario(sys.argv[1])
-    helpo.mostrar()
-
-    # elpo.borrarPalabra(sys.argv[2])
-    # helpo.buscarPalabra(sys.argv[3])
-    helpo.corregirTexto(sys.argv[4])
-    # helpo.mostrar()
-
-
-
-
-    # with open(sys.argv[4]) as archivo:
-    #    for linea in archivo:
-    #        lista = linea.split()
-    #        print(lista)
+        time.sleep(1.2)
+        clear()
