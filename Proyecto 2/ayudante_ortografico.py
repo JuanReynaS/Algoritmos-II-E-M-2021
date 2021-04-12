@@ -1,8 +1,9 @@
 import sys
 from colorama import Cursor, init, Fore, Style, Back
 import time as tm
+import string as st
+import pmli as pm
 init()
-
 
 class crearAyudante():
     def __init__(self):
